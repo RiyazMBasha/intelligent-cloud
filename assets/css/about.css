@@ -1,0 +1,2507 @@
+/*=========================================================
+    ABOUT PAGE STYLESHEET
+    Intelligent Technology Company
+    File : about.css
+    Version : 1.0
+=========================================================*/
+
+/*=========================================================
+    PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --primary:#0056D2;
+    --secondary:#00AEEF;
+    --accent:#F59E0B;
+
+    --dark:#0F172A;
+    --dark-light:#1E293B;
+
+    --light:#F8FAFC;
+    --white:#FFFFFF;
+
+    --text:#475569;
+    --heading:#0F172A;
+
+    --border:#E2E8F0;
+
+    --shadow-sm:0 4px 12px rgba(0,0,0,.08);
+    --shadow-md:0 10px 30px rgba(0,0,0,.12);
+    --shadow-lg:0 20px 50px rgba(0,0,0,.15);
+
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:20px;
+
+    --transition:.35s ease;
+}
+
+/*=========================================================
+    COMMON LAYOUT
+=========================================================*/
+
+.section-padding{
+
+    padding:100px 0;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1280px;
+
+    margin:auto;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+/*=========================================================
+    SECTION TITLES
+=========================================================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    display:inline-block;
+
+    background:#E8F1FF;
+
+    color:var(--primary);
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:18px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:var(--heading);
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.section-title p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+    HERO SECTION
+=========================================================*/
+
+.about-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#031B4E,#0056D2);
+
+    color:#fff;
+
+    padding:170px 0 140px;
+
+}
+
+.about-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("../images/about/hero-pattern.svg");
+
+    opacity:.08;
+
+    background-size:cover;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+}
+
+.section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    font-weight:600;
+
+    margin-bottom:30px;
+
+}
+
+.about-hero h1{
+
+    font-size:60px;
+
+    line-height:1.15;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+.about-hero h1 span{
+
+    color:#7DD3FC;
+
+}
+
+.about-hero p{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.90);
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/*=========================================================
+    BUTTONS
+=========================================================*/
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-md);
+
+    background:#0048B2;
+
+}
+
+.btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/*=========================================================
+    BREADCRUMB
+=========================================================*/
+
+.breadcrumb-section{
+
+    background:#F8FAFC;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:20px 0;
+
+    font-size:15px;
+
+}
+
+.breadcrumb a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.breadcrumb .current{
+
+    color:#64748B;
+
+}
+
+/*=========================================================
+    COMPANY OVERVIEW
+=========================================================*/
+
+.company-overview{
+
+    background:#fff;
+
+}
+
+.overview-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.overview-image{
+
+    position:relative;
+
+}
+
+.overview-image img{
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.overview-content h3{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    color:var(--heading);
+
+}
+
+.overview-content p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+    font-size:17px;
+
+    margin-bottom:24px;
+
+}
+
+/*=========================================================
+    HIGHLIGHTS
+=========================================================*/
+
+.overview-highlights{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    margin-top:40px;
+
+}
+
+.highlight{
+
+    display:flex;
+
+    gap:18px;
+
+    padding:24px;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.highlight:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.highlight i{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#EAF3FF;
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.highlight h4{
+
+    font-size:20px;
+
+    color:var(--heading);
+
+    margin-bottom:8px;
+
+}
+
+.highlight p{
+
+    margin:0;
+
+    color:var(--text);
+
+    font-size:15px;
+
+}
+
+/*=========================================================
+    GENERIC GRID HELPERS
+=========================================================*/
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mb-20{
+
+    margin-bottom:20px;
+
+}
+
+.mb-30{
+
+    margin-bottom:30px;
+
+}
+
+.mb-40{
+
+    margin-bottom:40px;
+
+}
+
+/*=========================================================
+    END OF PART 1
+    Continue with:
+    about.css – Part 2
+
+    ✔ Our Story
+    ✔ Vision & Mission
+    ✔ Core Values
+    ✔ Leadership Team
+    ✔ Cards
+    ✔ Icons
+    ✔ Hover Effects
+=========================================================*/
+
+/*=========================================================
+    OUR STORY
+=========================================================*/
+
+.our-story{
+
+    background:#F8FAFC;
+
+}
+
+.story-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.story-content .section-subtitle{
+
+    display:inline-block;
+
+    background:#EAF3FF;
+
+    color:var(--primary);
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+
+}
+
+.story-content h2{
+
+    font-size:42px;
+
+    color:var(--heading);
+
+    margin-bottom:25px;
+
+    line-height:1.25;
+
+}
+
+.story-content p{
+
+    color:var(--text);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+
+}
+
+.story-image{
+
+    position:relative;
+
+}
+
+.story-image img{
+
+    width:100%;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow-lg);
+
+    transition:var(--transition);
+
+}
+
+.story-image img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/*=========================================================
+    STORY FEATURES
+=========================================================*/
+
+.story-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:35px;
+
+}
+
+.feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 22px;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.feature-item:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.feature-item i{
+
+    color:#16A34A;
+
+    font-size:22px;
+
+}
+
+.feature-item span{
+
+    color:var(--heading);
+
+    font-weight:600;
+
+}
+
+/*=========================================================
+    VISION & MISSION
+=========================================================*/
+
+.vision-mission{
+
+    background:#fff;
+
+}
+
+.vm-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.vm-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:45px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.vm-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+.vm-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.vm-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    margin-bottom:30px;
+
+}
+
+.vm-card h3{
+
+    font-size:30px;
+
+    color:var(--heading);
+
+    margin-bottom:18px;
+
+}
+
+.vm-card p{
+
+    color:var(--text);
+
+    font-size:17px;
+
+    line-height:1.9;
+
+}
+
+/*=========================================================
+    SHARED CARD STYLES
+=========================================================*/
+
+.card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.card-body{
+
+    padding:35px;
+
+}
+
+.icon-circle{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#EAF3FF;
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.icon-gradient{
+
+    width:75px;
+
+    height:75px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+/*=========================================================
+    IMAGE EFFECTS
+=========================================================*/
+
+.image-frame{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.image-frame img{
+
+    width:100%;
+
+    transition:.6s ease;
+
+}
+
+.image-frame:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.image-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,86,210,.15);
+
+    opacity:0;
+
+    transition:var(--transition);
+
+}
+
+.image-frame:hover .image-overlay{
+
+    opacity:1;
+
+}
+
+/*=========================================================
+    GLASS EFFECT
+=========================================================*/
+
+.glass-card{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/*=========================================================
+    HOVER UTILITIES
+=========================================================*/
+
+.hover-up{
+
+    transition:var(--transition);
+
+}
+
+.hover-up:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.hover-scale{
+
+    transition:var(--transition);
+
+}
+
+.hover-scale:hover{
+
+    transform:scale(1.03);
+
+}
+
+.shadow-hover{
+
+    transition:var(--transition);
+
+}
+
+.shadow-hover:hover{
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/*=========================================================
+    END OF PART 2A
+
+    Continue with:
+
+    about.css — Part 2B
+
+    ✔ Core Values
+    ✔ Leadership Team
+    ✔ Team Cards
+    ✔ Team Images
+    ✔ Social Icons
+    ✔ Premium Hover Effects
+=========================================================*/
+
+/*=========================================================
+    CORE VALUES
+=========================================================*/
+
+.core-values{
+
+    background:#F8FAFC;
+
+}
+
+.values-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.value-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.value-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transform:scaleX(0);
+
+    transition:var(--transition);
+
+}
+
+.value-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.value-card i{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    margin-bottom:25px;
+
+}
+
+.value-card h3{
+
+    font-size:24px;
+
+    color:var(--heading);
+
+    margin-bottom:18px;
+
+}
+
+.value-card p{
+
+    color:var(--text);
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+    LEADERSHIP
+=========================================================*/
+
+.leadership{
+
+    background:#FFFFFF;
+
+}
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.team-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.team-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.team-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.team-card h3{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    color:var(--heading);
+
+    padding:0 20px;
+
+}
+
+.team-card span{
+
+    display:block;
+
+    margin:12px 0;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+.team-card p{
+
+    padding:0 25px 30px;
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/*=========================================================
+    TEAM IMAGE PLACEHOLDER
+=========================================================*/
+
+.team-placeholder{
+
+    height:320px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        #EEF5FF,
+        #DDEBFF
+    );
+
+    color:var(--primary);
+
+    font-size:70px;
+
+}
+
+/*=========================================================
+    SOCIAL LINKS
+=========================================================*/
+
+.team-social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.team-social a{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#F1F5F9;
+
+    color:var(--primary);
+
+    transition:var(--transition);
+
+}
+
+.team-social a:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-5px);
+
+}
+
+/*=========================================================
+    PROFILE BADGE
+=========================================================*/
+
+.profile-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    background:#EAF3FF;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-top:15px;
+
+}
+
+/*=========================================================
+    PREMIUM CARD EFFECTS
+=========================================================*/
+
+.team-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:0;
+
+    background:linear-gradient(
+        rgba(0,86,210,.03),
+        rgba(0,174,239,.08)
+    );
+
+    transition:.4s;
+
+    z-index:0;
+
+}
+
+.team-card:hover::after{
+
+    height:100%;
+
+}
+
+.team-card>*{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+/*=========================================================
+    ICON ANIMATIONS
+=========================================================*/
+
+.value-card:hover i{
+
+    transform:rotateY(360deg);
+
+    transition:.8s;
+
+}
+
+.team-social a i{
+
+    transition:.3s;
+
+}
+
+.team-social a:hover i{
+
+    transform:scale(1.2);
+
+}
+
+/*=========================================================
+    CONTENT SPACING HELPERS
+=========================================================*/
+
+.section-divider{
+
+    width:100px;
+
+    height:4px;
+
+    margin:20px auto 40px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:50px;
+
+}
+
+.max-width-800{
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+.text-muted{
+
+    color:var(--text);
+
+}
+
+/*=========================================================
+    END OF PART 2B
+
+    Next:
+    about.css — Part 3
+
+    ✔ Company Timeline
+    ✔ Technology Partners
+    ✔ Statistics Counter
+    ✔ Call To Action
+    ✔ Footer Adjustments
+    ✔ Animations
+    ✔ About Page Responsive Enhancements
+=========================================================*/
+
+/*=========================================================
+    COMPANY TIMELINE
+=========================================================*/
+
+.company-timeline{
+
+    background:#F8FAFC;
+
+    position:relative;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    max-width:1000px;
+
+    margin:60px auto 0;
+
+    padding-left:40px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:25px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:20px;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:60px;
+
+    padding-left:55px;
+
+}
+
+.timeline-item:last-child{
+
+    margin-bottom:0;
+
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    left:-6px;
+
+    top:8px;
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    border:5px solid #fff;
+
+    box-shadow:0 0 0 4px rgba(0,86,210,.18);
+
+    z-index:2;
+
+}
+
+.timeline-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.timeline-year{
+
+    display:inline-block;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+.timeline-card h3{
+
+    font-size:28px;
+
+    color:var(--heading);
+
+    margin-bottom:15px;
+
+}
+
+.timeline-card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+/*=========================================================
+    TECHNOLOGY PARTNERS
+=========================================================*/
+
+.tech-partners{
+
+    background:#fff;
+
+}
+
+.partner-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.partner-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.partner-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.partner-card img{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    object-fit:contain;
+
+}
+
+.partner-card h4{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    color:var(--heading);
+
+}
+
+.partner-card p{
+
+    margin-top:10px;
+
+    color:var(--text);
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/*=========================================================
+    PARTNER BADGES
+=========================================================*/
+
+.partner-badge{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    background:#EAF3FF;
+
+    color:var(--primary);
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.partner-card:hover .partner-badge{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*=========================================================
+    STATISTICS
+=========================================================*/
+
+.about-stats{
+
+    background:linear-gradient(
+        135deg,
+        #031B4E,
+        #0056D2
+    );
+
+    color:#fff;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.about-stats::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:radial-gradient(circle at top right,
+        rgba(255,255,255,.12),
+        transparent 60%);
+
+}
+
+.stats-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:22px;
+
+    padding:45px 25px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+.stat-card i{
+
+    font-size:42px;
+
+    margin-bottom:22px;
+
+    color:#7DD3FC;
+
+}
+
+.stat-number{
+
+    font-size:52px;
+
+    font-weight:800;
+
+    line-height:1;
+
+    margin-bottom:12px;
+
+}
+
+.stat-title{
+
+    font-size:17px;
+
+    color:rgba(255,255,255,.92);
+
+    letter-spacing:.4px;
+
+}
+
+/*=========================================================
+    COUNTER ANIMATION SUPPORT
+=========================================================*/
+
+.counter{
+
+    display:inline-block;
+
+    min-width:90px;
+
+}
+
+.stat-card.animate{
+
+    animation:statFade .8s ease forwards;
+
+}
+
+@keyframes statFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================================
+    SECTION DIVIDER
+=========================================================*/
+
+.timeline-divider{
+
+    width:140px;
+
+    height:5px;
+
+    margin:0 auto 60px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+/*=========================================================
+    END OF PART 3A
+
+    Next:
+    about.css – Part 3B
+
+    ✔ Premium Call-To-Action
+    ✔ Footer Enhancements
+    ✔ About Page Animations
+    ✔ Scroll Reveal Effects
+    ✔ Responsive Refinements
+    ✔ End of about.css
+=========================================================*/
+
+/*=========================================================
+    CALL TO ACTION
+=========================================================*/
+
+.about-cta{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:110px 0;
+
+}
+
+.about-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,255,255,.15),
+        transparent 45%),
+
+        radial-gradient(circle at bottom right,
+        rgba(255,255,255,.08),
+        transparent 45%);
+
+}
+
+.about-cta .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.about-cta h2{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.about-cta p{
+
+    max-width:760px;
+
+    margin:0 auto 45px;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.about-cta .btn-primary{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+.about-cta .btn-primary:hover{
+
+    background:#f3f6fb;
+
+}
+
+.about-cta .btn-secondary{
+
+    background:transparent;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    color:#fff;
+
+}
+
+.about-cta .btn-secondary:hover{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+/*=========================================================
+    FOOTER ENHANCEMENTS
+=========================================================*/
+
+.footer{
+
+    position:relative;
+
+}
+
+.footer-top{
+
+    padding-bottom:50px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer-links a{
+
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+    color:var(--secondary);
+
+    padding-left:6px;
+
+}
+
+.footer-social a{
+
+    transition:var(--transition);
+
+}
+
+.footer-social a:hover{
+
+    transform:translateY(-5px) rotate(360deg);
+
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+    padding-top:30px;
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+/*=========================================================
+    SCROLL REVEAL ANIMATIONS
+=========================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-70px);
+
+    transition:.8s ease;
+
+}
+
+.fade-left.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(70px);
+
+    transition:.8s ease;
+
+}
+
+.fade-right.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+.zoom-in{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+    transition:.8s ease;
+
+}
+
+.zoom-in.active{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/*=========================================================
+    FLOAT ANIMATION
+=========================================================*/
+
+.float{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-14px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================================
+    SHINE EFFECT
+=========================================================*/
+
+.shine{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.shine::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-120%;
+
+    width:60%;
+
+    height:250%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:rotate(25deg);
+
+    transition:.9s;
+
+}
+
+.shine:hover::after{
+
+    left:150%;
+
+}
+
+/*=========================================================
+    HOVER UTILITIES
+=========================================================*/
+
+.hover-shadow{
+
+    transition:var(--transition);
+
+}
+
+.hover-shadow:hover{
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.hover-lift{
+
+    transition:var(--transition);
+
+}
+
+.hover-lift:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.rounded-xl{
+
+    border-radius:24px;
+
+}
+
+.glass{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+}
+
+/*=========================================================
+    ABOUT PAGE RESPONSIVE HELPERS
+=========================================================*/
+
+@media (max-width:1200px){
+
+    .partner-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    .timeline{
+
+        padding-left:25px;
+
+    }
+
+    .timeline-item{
+
+        padding-left:40px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .partner-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .about-cta h2{
+
+        font-size:36px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .timeline::before{
+
+        left:15px;
+
+    }
+
+    .timeline-dot{
+
+        left:-16px;
+
+    }
+
+    .timeline-card{
+
+        padding:25px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .partner-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-cta{
+
+        padding:80px 20px;
+
+    }
+
+    .about-cta h2{
+
+        font-size:30px;
+
+    }
+
+    .about-cta p{
+
+        font-size:16px;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .timeline{
+
+        padding-left:18px;
+
+    }
+
+    .timeline-card{
+
+        padding:22px;
+
+    }
+
+    .timeline-card h3{
+
+        font-size:22px;
+
+    }
+
+    .stat-number{
+
+        font-size:42px;
+
+    }
+
+}
+
+/*=========================================================
+    PRINT STYLES
+=========================================================*/
+
+@media print{
+
+    .about-cta,
+
+    .footer,
+
+    .btn-primary,
+
+    .btn-secondary{
+
+        display:none;
+
+    }
+
+}
+
+/*=========================================================
+    ACCESSIBILITY
+=========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+/*=========================================================
+    END OF FILE
+
+    assets/css/about.css
+
+    Version : 1.0
+
+    Intelligent Technology Company
+
+=========================================================*/
