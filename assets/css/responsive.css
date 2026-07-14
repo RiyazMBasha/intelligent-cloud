@@ -1,0 +1,1569 @@
+/*=====================================================
+    Intelligent Technology Company
+    Responsive CSS
+    Version 1.0
+=====================================================*/
+
+
+/*=====================================================
+    EXTRA LARGE DESKTOP
+    1400px and Above
+=====================================================*/
+
+@media screen and (min-width:1400px){
+
+.container{
+
+    max-width:1320px;
+
+}
+
+.hero-left h1{
+
+    font-size:72px;
+
+}
+
+.hero-left p{
+
+    font-size:22px;
+
+}
+
+.section-title h2{
+
+    font-size:52px;
+
+}
+
+.services-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.counter-grid{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+}
+
+
+
+/*=====================================================
+    DESKTOP
+    1200px - 1399px
+=====================================================*/
+
+@media screen and (max-width:1399px){
+
+.container{
+
+    width:92%;
+
+}
+
+.hero-left h1{
+
+    font-size:58px;
+
+}
+
+.hero-grid{
+
+    gap:40px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+}
+
+}
+
+
+
+/*=====================================================
+    LAPTOP
+    992px - 1199px
+=====================================================*/
+
+@media screen and (max-width:1199px){
+
+header .container{
+
+    padding:0 15px;
+
+}
+
+#navbar ul{
+
+    gap:18px;
+
+}
+
+#navbar ul li a{
+
+    font-size:15px;
+
+}
+
+.hero{
+
+    min-height:90vh;
+
+}
+
+.hero-left h1{
+
+    font-size:50px;
+
+}
+
+.hero-left p{
+
+    font-size:17px;
+
+}
+
+.hero-grid{
+
+    gap:35px;
+
+}
+
+.about-grid{
+
+    gap:40px;
+
+}
+
+.services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.tech-grid{
+
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+.counter-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+/*=====================================================
+    TABLET LANDSCAPE
+    768px - 991px
+=====================================================*/
+
+@media screen and (max-width:991px){
+
+section{
+
+    padding:80px 0;
+
+}
+
+/*-------------------------
+Navigation
+--------------------------*/
+
+#menuBtn{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+#navbar{
+
+    position:absolute;
+
+    top:90px;
+
+    left:0;
+
+    width:100%;
+
+    background:#ffffff;
+
+    display:none;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+#navbar.active{
+
+    display:block;
+
+}
+
+#navbar ul{
+
+    flex-direction:column;
+
+    padding:25px;
+
+}
+
+#navbar ul li{
+
+    margin-bottom:18px;
+
+}
+
+#navbar ul li:last-child{
+
+    margin-bottom:0;
+
+}
+
+/*-------------------------
+Hero
+--------------------------*/
+
+.hero{
+
+    text-align:center;
+
+    min-height:auto;
+
+    padding:160px 0 100px;
+
+}
+
+.hero-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-right{
+
+    order:-1;
+
+}
+
+.hero-right img{
+
+    width:80%;
+
+    margin:auto;
+
+}
+
+.hero-left h1{
+
+    font-size:48px;
+
+}
+
+.hero-left p{
+
+    font-size:17px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+/*-------------------------
+About
+--------------------------*/
+
+.about-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-grid img{
+
+    width:80%;
+
+    margin:auto;
+
+}
+
+/*-------------------------
+Services
+--------------------------*/
+
+.services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+/*-------------------------
+Technology
+--------------------------*/
+
+.tech-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+/*-------------------------
+Counter
+--------------------------*/
+
+.counter-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+/*-------------------------
+Footer
+--------------------------*/
+
+.footer-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*=====================================================
+    LARGE PHONES
+    576px - 767px
+=====================================================*/
+
+@media screen and (max-width:767px){
+
+/*-------------------------
+Global
+--------------------------*/
+
+section{
+
+    padding:70px 0;
+
+}
+
+.container{
+
+    width:92%;
+
+}
+
+/*-------------------------
+Header
+--------------------------*/
+
+header .container{
+
+    height:80px;
+
+}
+
+.logo img{
+
+    height:50px;
+
+}
+
+.header-icons{
+
+    gap:10px;
+
+}
+
+.header-icons button{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+/*-------------------------
+Hero
+--------------------------*/
+
+.hero{
+
+    padding:140px 0 80px;
+
+}
+
+.hero-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.hero-right{
+
+    order:-1;
+
+}
+
+.hero-right img{
+
+    width:85%;
+
+    margin:auto;
+
+}
+
+.hero-left{
+
+    text-align:center;
+
+}
+
+.hero-left h1{
+
+    font-size:40px;
+
+    line-height:1.2;
+
+}
+
+.hero-left p{
+
+    font-size:16px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+/*-------------------------
+Section Titles
+--------------------------*/
+
+.section-title h2{
+
+    font-size:34px;
+
+}
+
+.section-title p{
+
+    font-size:16px;
+
+}
+
+/*-------------------------
+About
+--------------------------*/
+
+.about-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.about-grid img{
+
+    width:100%;
+
+}
+
+.about-grid h3{
+
+    font-size:30px;
+
+}
+
+/*-------------------------
+Services
+--------------------------*/
+
+.services-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.service-card{
+
+    padding:35px 25px;
+
+}
+
+.service-card i{
+
+    font-size:48px;
+
+}
+
+/*-------------------------
+Why Choose Us
+--------------------------*/
+
+.why-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.why-card{
+
+    padding:30px;
+
+}
+
+/*-------------------------
+Technology
+--------------------------*/
+
+.tech-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.tech-grid span{
+
+    padding:20px;
+
+    font-size:16px;
+
+}
+
+/*-------------------------
+Counter
+--------------------------*/
+
+.counter-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.counter-card{
+
+    padding:30px;
+
+}
+
+.counter-card h2{
+
+    font-size:42px;
+
+}
+
+/*-------------------------
+Testimonials
+--------------------------*/
+
+.testimonial-box{
+
+    padding:40px 30px;
+
+}
+
+.testimonial-box p{
+
+    font-size:18px;
+
+}
+
+/*-------------------------
+CTA
+--------------------------*/
+
+.cta h2{
+
+    font-size:36px;
+
+}
+
+.cta p{
+
+    font-size:17px;
+
+}
+
+/*-------------------------
+Footer
+--------------------------*/
+
+.footer-grid{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.footer-logo{
+
+    margin:auto auto 20px;
+
+}
+
+footer ul{
+
+    padding:0;
+
+}
+
+footer ul li{
+
+    margin-bottom:10px;
+
+}
+
+}
+
+
+
+/*=====================================================
+    MOBILE PHONES
+    320px - 575px
+=====================================================*/
+
+@media screen and (max-width:575px){
+
+/*-------------------------
+Global
+--------------------------*/
+
+section{
+
+    padding:60px 0;
+
+}
+
+.container{
+
+    width:94%;
+
+}
+
+/*-------------------------
+Header
+--------------------------*/
+
+header .container{
+
+    height:75px;
+
+}
+
+.logo img{
+
+    height:42px;
+
+}
+
+.header-icons button{
+
+    width:38px;
+
+    height:38px;
+
+}
+
+/*-------------------------
+Navigation
+--------------------------*/
+
+#navbar{
+
+    top:75px;
+
+}
+
+#navbar ul{
+
+    padding:20px;
+
+}
+
+#navbar ul li{
+
+    margin-bottom:15px;
+
+}
+
+/*-------------------------
+Hero
+--------------------------*/
+
+.hero{
+
+    padding:120px 0 70px;
+
+}
+
+.hero-left h1{
+
+    font-size:32px;
+
+}
+
+.hero-left p{
+
+    font-size:15px;
+
+}
+
+.hero-right img{
+
+    width:100%;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+    width:100%;
+
+    max-width:280px;
+
+    text-align:center;
+
+    padding:15px 20px;
+
+}
+
+/*-------------------------
+Section Titles
+--------------------------*/
+
+.section-title{
+
+    margin-bottom:45px;
+
+}
+
+.section-title span{
+
+    font-size:13px;
+
+}
+
+.section-title h2{
+
+    font-size:28px;
+
+}
+
+/*-------------------------
+About
+--------------------------*/
+
+.about-grid h3{
+
+    font-size:26px;
+
+}
+
+.about-list li{
+
+    font-size:15px;
+
+}
+
+.about-list i{
+
+    width:30px;
+
+    height:30px;
+
+    margin-right:10px;
+
+}
+
+/*-------------------------
+Services
+--------------------------*/
+
+.service-card{
+
+    padding:30px 20px;
+
+}
+
+.service-card h3{
+
+    font-size:22px;
+
+}
+
+.service-card p{
+
+    font-size:15px;
+
+}
+
+/*-------------------------
+Why Choose Us
+--------------------------*/
+
+.why-card{
+
+    padding:25px;
+
+}
+
+.why-card h3{
+
+    font-size:20px;
+
+}
+
+.why-card i{
+
+    font-size:42px;
+
+}
+
+/*-------------------------
+Technology
+--------------------------*/
+
+.tech-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.tech-grid span{
+
+    font-size:15px;
+
+}
+
+/*-------------------------
+Counter
+--------------------------*/
+
+.counter-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.counter-card{
+
+    padding:25px;
+
+}
+
+.counter-card h2{
+
+    font-size:36px;
+
+}
+
+.counter-card p{
+
+    font-size:16px;
+
+}
+
+/*-------------------------
+Testimonials
+--------------------------*/
+
+.testimonial-box{
+
+    padding:30px 20px;
+
+}
+
+.testimonial-box p{
+
+    font-size:16px;
+
+}
+
+/*-------------------------
+CTA
+--------------------------*/
+
+.cta h2{
+
+    font-size:30px;
+
+}
+
+.cta p{
+
+    font-size:16px;
+
+}
+
+.cta .btn-primary{
+
+    width:100%;
+
+    max-width:280px;
+
+}
+
+/*-------------------------
+Footer
+--------------------------*/
+
+footer{
+
+    padding:60px 0 25px;
+
+}
+
+.footer-grid{
+
+    gap:35px;
+
+}
+
+footer h3{
+
+    font-size:20px;
+
+}
+
+footer p,
+
+footer li{
+
+    font-size:15px;
+
+}
+
+.copyright{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+/*-------------------------
+Scroll Button
+--------------------------*/
+
+#topBtn{
+
+    right:20px;
+
+    bottom:20px;
+
+    width:48px;
+
+    height:48px;
+
+}
+
+}
+
+/*=====================================================
+    CONTACT PAGE
+=====================================================*/
+
+@media screen and (max-width:991px){
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+}
+
+.contact-info{
+
+    order:2;
+
+}
+
+.contact-form{
+
+    order:1;
+
+}
+
+.contact-map iframe{
+
+    height:350px;
+
+}
+
+}
+
+@media screen and (max-width:767px){
+
+.contact-card{
+
+    padding:25px;
+
+}
+
+.contact-card i{
+
+    font-size:40px;
+
+}
+
+.contact-card h3{
+
+    font-size:22px;
+
+}
+
+.contact-form{
+
+    padding:30px;
+
+}
+
+.contact-form input,
+
+.contact-form textarea,
+
+.contact-form select{
+
+    font-size:15px;
+
+    padding:14px;
+
+}
+
+.contact-map iframe{
+
+    height:300px;
+
+}
+
+}
+
+@media screen and (max-width:575px){
+
+.contact-form{
+
+    padding:20px;
+
+}
+
+.contact-card{
+
+    text-align:center;
+
+}
+
+.contact-map iframe{
+
+    height:250px;
+
+}
+
+}
+
+/*=====================================================
+    CUSTOMER QUERY PAGE
+=====================================================*/
+
+@media screen and (max-width:991px){
+
+.query-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:35px;
+
+}
+
+}
+
+@media screen and (max-width:767px){
+
+.query-form{
+
+    padding:30px;
+
+}
+
+.query-form .row{
+
+    display:block;
+
+}
+
+.query-form .col{
+
+    width:100%;
+
+    margin-bottom:20px;
+
+}
+
+.query-form input,
+
+.query-form textarea,
+
+.query-form select{
+
+    width:100%;
+
+}
+
+}
+
+@media screen and (max-width:575px){
+
+.query-form{
+
+    padding:20px;
+
+}
+
+.query-form h2{
+
+    font-size:28px;
+
+}
+
+.query-form label{
+
+    font-size:15px;
+
+}
+
+}
+
+/*=====================================================
+    CAREERS PAGE
+=====================================================*/
+
+@media screen and (max-width:991px){
+
+.jobs-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+}
+
+@media screen and (max-width:767px){
+
+.jobs-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.job-card{
+
+    padding:30px;
+
+}
+
+.job-card h3{
+
+    font-size:24px;
+
+}
+
+}
+
+@media screen and (max-width:575px){
+
+.job-card{
+
+    padding:25px;
+
+}
+
+.job-card .btn-primary{
+
+    width:100%;
+
+}
+
+}
+
+/*=====================================================
+    FORMS
+=====================================================*/
+
+@media screen and (max-width:767px){
+
+form{
+
+    width:100%;
+
+}
+
+input,
+
+select,
+
+textarea{
+
+    width:100%;
+
+    font-size:15px;
+
+}
+
+button{
+
+    width:auto;
+
+}
+
+}
+
+@media screen and (max-width:575px){
+
+input,
+
+select,
+
+textarea{
+
+    padding:14px;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+    width:100%;
+
+}
+
+}
+
+/*=====================================================
+    TABLE RESPONSIVE
+=====================================================*/
+
+@media screen and (max-width:767px){
+
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+    white-space:nowrap;
+
+}
+
+}
+
+/*=====================================================
+    IMAGE RESPONSIVENESS
+=====================================================*/
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+video{
+
+    max-width:100%;
+
+}
+
+iframe{
+
+    max-width:100%;
+
+}
+
+/*=====================================================
+    FLEX UTILITIES
+=====================================================*/
+
+@media screen and (max-width:767px){
+
+.d-flex{
+
+    flex-direction:column;
+
+}
+
+.justify-between{
+
+    justify-content:center;
+
+}
+
+.align-center{
+
+    text-align:center;
+
+}
+
+.gap-20{
+
+    gap:15px;
+
+}
+
+}
+
+/*=====================================================
+    SPACING UTILITIES
+=====================================================*/
+
+@media screen and (max-width:575px){
+
+.mt-5{
+
+    margin-top:25px;
+
+}
+
+.mt-4{
+
+    margin-top:20px;
+
+}
+
+.mt-3{
+
+    margin-top:15px;
+
+}
+
+.mb-5{
+
+    margin-bottom:25px;
+
+}
+
+.mb-4{
+
+    margin-bottom:20px;
+
+}
+
+.mb-3{
+
+    margin-bottom:15px;
+
+}
+
+}
+
+/*=====================================================
+    PRINT STYLES
+=====================================================*/
+
+@media print{
+
+header,
+
+footer,
+
+#topBtn,
+
+#loader,
+
+.hero-buttons,
+
+.header-icons{
+
+    display:none !important;
+
+}
+
+body{
+
+    background:#fff;
+
+    color:#000;
+
+    font-size:12pt;
+
+}
+
+section{
+
+    padding:20px 0;
+
+    page-break-inside:avoid;
+
+}
+
+a{
+
+    color:#000;
+
+    text-decoration:none;
+
+}
+
+}
+
+/*=====================================================
+    ACCESSIBILITY
+=====================================================*/
+
+:focus-visible{
+
+    outline:3px solid var(--secondary);
+
+    outline-offset:3px;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}
+
+/*=====================================================
+    LANDSCAPE MOBILE
+=====================================================*/
+
+@media screen and (max-height:500px) and (orientation:landscape){
+
+.hero{
+
+    min-height:auto;
+
+    padding:120px 0 60px;
+
+}
+
+.hero-left h1{
+
+    font-size:36px;
+
+}
+
+.hero-right img{
+
+    width:60%;
+
+}
+
+}
+
+/*=====================================================
+    LARGE DESKTOP POLISH
+=====================================================*/
+
+@media screen and (min-width:1600px){
+
+.container{
+
+    max-width:1450px;
+
+}
+
+.hero-left h1{
+
+    font-size:78px;
+
+}
+
+.section-title h2{
+
+    font-size:58px;
+
+}
+
+.hero-left p{
+
+    font-size:22px;
+
+}
+
+}
+
+/*=====================================================
+    HIGH DPI DISPLAYS
+=====================================================*/
+
+@media (-webkit-min-device-pixel-ratio:2),
+(min-resolution:192dpi){
+
+.logo img{
+
+    image-rendering:auto;
+
+}
+
+}
+
+/*=====================================================
+    END OF RESPONSIVE.CSS
+=====================================================*/
