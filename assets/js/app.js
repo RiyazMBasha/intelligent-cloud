@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     smoothScrolling();
 
-}*
+}*/
 
 function initializeWebsite() {
 
