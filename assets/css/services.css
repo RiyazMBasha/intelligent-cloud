@@ -1,0 +1,2817 @@
+/*=========================================================
+    Intelligent Technology Company
+    Services Page Stylesheet
+    File: assets/css/services.css
+    Version: 1.0
+=========================================================*/
+
+/*=========================================================
+    PAGE VARIABLES
+=========================================================*/
+
+:root{
+
+    --services-primary:#0056D2;
+
+    --services-secondary:#00AEEF;
+
+    --services-dark:#0F172A;
+
+    --services-light:#F8FAFC;
+
+    --services-white:#FFFFFF;
+
+    --services-text:#64748B;
+
+    --services-heading:#0B1324;
+
+    --services-border:#E5E7EB;
+
+    --services-success:#16A34A;
+
+    --services-warning:#F59E0B;
+
+    --services-danger:#DC2626;
+
+    --services-radius:20px;
+
+    --services-radius-lg:28px;
+
+    --services-transition:.35s ease;
+
+    --services-shadow-sm:
+        0 6px 18px rgba(15,23,42,.08);
+
+    --services-shadow:
+        0 12px 35px rgba(15,23,42,.12);
+
+    --services-shadow-lg:
+        0 20px 50px rgba(15,23,42,.18);
+
+}
+
+/*=========================================================
+    PAGE UTILITIES
+=========================================================*/
+
+.services-page{
+
+    background:var(--services-white);
+
+    color:var(--services-text);
+
+}
+
+.section-padding{
+
+    padding:100px 0;
+
+}
+
+.section-title{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.section-title span{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    border-radius:40px;
+
+    background:#EAF3FF;
+
+    color:var(--services-primary);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+.section-title h2{
+
+    font-size:44px;
+
+    line-height:1.25;
+
+    color:var(--services-heading);
+
+    margin-bottom:22px;
+
+    font-weight:700;
+
+}
+
+.section-title p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:var(--services-text);
+
+}
+
+/*=========================================================
+    HERO SECTION
+=========================================================*/
+
+.services-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:180px 0 120px;
+
+    background:linear-gradient(
+        135deg,
+        #031B4E,
+        #0056D2,
+        #00AEEF
+    );
+
+    color:#fff;
+
+}
+
+.services-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(255,255,255,.18),
+        transparent 42%),
+
+        radial-gradient(circle at bottom left,
+        rgba(255,255,255,.10),
+        transparent 45%);
+
+}
+
+.services-hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+}
+
+.hero-content .section-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.14);
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:.6px;
+
+}
+
+.hero-content h1{
+
+    font-size:58px;
+
+    line-height:1.15;
+
+    margin-bottom:28px;
+
+    font-weight:800;
+
+}
+
+.hero-content h1 span{
+
+    display:block;
+
+    color:#A5E3FF;
+
+}
+
+.hero-content p{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    max-width:680px;
+
+    color:rgba(255,255,255,.92);
+
+    margin-bottom:42px;
+
+}
+
+/*=========================================================
+    HERO BUTTONS
+=========================================================*/
+
+.hero-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-buttons .btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    color:var(--services-primary);
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow);
+
+}
+
+.hero-buttons .btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--services-shadow-lg);
+
+}
+
+.hero-buttons .btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:var(--services-transition);
+
+}
+
+.hero-buttons .btn-secondary:hover{
+
+    background:#fff;
+
+    color:var(--services-primary);
+
+    transform:translateY(-5px);
+
+}
+
+/*=========================================================
+    BREADCRUMB
+=========================================================*/
+
+.breadcrumb-section{
+
+    background:#F8FAFC;
+
+    border-bottom:1px solid var(--services-border);
+
+    padding:22px 0;
+
+}
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    font-size:15px;
+
+}
+
+.breadcrumb a{
+
+    color:var(--services-primary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:var(--services-transition);
+
+}
+
+.breadcrumb a:hover{
+
+    color:var(--services-secondary);
+
+}
+
+.breadcrumb span{
+
+    color:#94A3B8;
+
+}
+
+.breadcrumb .current{
+
+    color:var(--services-heading);
+
+    font-weight:600;
+
+}
+
+/*=========================================================
+    SERVICES INTRODUCTION
+=========================================================*/
+
+.services-intro{
+
+    background:#FFFFFF;
+
+}
+
+.intro-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+.intro-image{
+
+    text-align:center;
+
+}
+
+.intro-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+    height:auto;
+
+}
+
+.intro-content h3{
+
+    font-size:34px;
+
+    color:var(--services-heading);
+
+    margin-bottom:24px;
+
+    line-height:1.3;
+
+}
+
+.intro-content p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:var(--services-text);
+
+    margin-bottom:22px;
+
+}
+
+/*=========================================================
+    SERVICE HIGHLIGHTS
+=========================================================*/
+
+.service-highlights{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-top:40px;
+
+}
+
+.highlight{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:24px;
+
+    background:#FFFFFF;
+
+    border:1px solid var(--services-border);
+
+    border-radius:18px;
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow-sm);
+
+}
+
+.highlight:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--services-shadow);
+
+}
+
+.highlight i{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(
+        135deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+    color:#fff;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.highlight h4{
+
+    font-size:20px;
+
+    color:var(--services-heading);
+
+    margin-bottom:8px;
+
+}
+
+.highlight p{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:var(--services-text);
+
+}
+
+/*=========================================================
+    SECTION TITLE ENHANCEMENTS
+=========================================================*/
+
+.section-title.light{
+
+    color:#fff;
+
+}
+
+.section-title.light h2{
+
+    color:#fff;
+
+}
+
+.section-title.light p{
+
+    color:rgba(255,255,255,.90);
+
+}
+
+.section-divider{
+
+    width:90px;
+
+    height:5px;
+
+    margin:28px auto;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+}
+
+/*=========================================================
+    GRID HELPERS
+=========================================================*/
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.grid-center{
+
+    align-items:center;
+
+}
+
+.grid-stretch{
+
+    align-items:stretch;
+
+}
+
+/*=========================================================
+    SHARED BUTTON STYLES
+=========================================================*/
+
+.btn-primary,
+
+.btn-secondary,
+
+.btn-outline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 32px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:var(--services-transition);
+
+}
+
+.btn-primary{
+
+    background:var(--services-primary);
+
+    color:#fff;
+
+    border:none;
+
+}
+
+.btn-primary:hover{
+
+    background:#0048B4;
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--services-shadow);
+
+}
+
+.btn-secondary{
+
+    background:var(--services-secondary);
+
+    color:#fff;
+
+}
+
+.btn-secondary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--services-shadow);
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    border:2px solid var(--services-primary);
+
+    color:var(--services-primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--services-primary);
+
+    color:#fff;
+
+}
+
+/*=========================================================
+    HELPER UTILITY CLASSES
+=========================================================*/
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.mt-30{
+
+    margin-top:30px;
+
+}
+
+.mt-50{
+
+    margin-top:50px;
+
+}
+
+.mb-30{
+
+    margin-bottom:30px;
+
+}
+
+.mb-50{
+
+    margin-bottom:50px;
+
+}
+
+.max-width-700{
+
+    max-width:700px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.max-width-900{
+
+    max-width:900px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.shadow{
+
+    box-shadow:var(--services-shadow);
+
+}
+
+.shadow-lg{
+
+    box-shadow:var(--services-shadow-lg);
+
+}
+
+.rounded{
+
+    border-radius:var(--services-radius);
+
+}
+
+.rounded-lg{
+
+    border-radius:var(--services-radius-lg);
+
+}
+
+.bg-light{
+
+    background:var(--services-light);
+
+}
+
+.bg-white{
+
+    background:#FFFFFF;
+
+}
+
+.bg-primary{
+
+    background:var(--services-primary);
+
+    color:#fff;
+
+}
+
+/*=========================================================
+    END OF PART 1
+
+    Next:
+    services.css – Part 2
+
+    ✔ Cloud Computing
+    ✔ AWS Professional Services
+    ✔ Azure Services
+    ✔ Google Cloud Platform
+    ✔ Platform Cards
+    ✔ Cloud Benefits
+
+=========================================================*/
+/*=========================================================
+    CLOUD COMPUTING SERVICES
+=========================================================*/
+
+.cloud-services{
+
+    background:#FFFFFF;
+
+}
+
+.cloud-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.cloud-image{
+
+    text-align:center;
+
+}
+
+.cloud-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+    height:auto;
+
+    transition:var(--services-transition);
+
+}
+
+.cloud-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.cloud-content h3{
+
+    font-size:36px;
+
+    color:var(--services-heading);
+
+    margin-bottom:24px;
+
+    line-height:1.3;
+
+}
+
+.cloud-content p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:var(--services-text);
+
+    margin-bottom:35px;
+
+}
+
+.cloud-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px 18px;
+
+    background:#FFFFFF;
+
+    border:1px solid var(--services-border);
+
+    border-radius:14px;
+
+    transition:var(--services-transition);
+
+}
+
+.feature-item:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--services-primary);
+
+    box-shadow:var(--services-shadow);
+
+}
+
+.feature-item i{
+
+    color:var(--services-success);
+
+    font-size:18px;
+
+}
+
+.feature-item span{
+
+    font-weight:600;
+
+    color:var(--services-heading);
+
+}
+
+/*=========================================================
+    CLOUD PLATFORMS
+=========================================================*/
+
+.cloud-platforms{
+
+    background:#F8FAFC;
+
+}
+
+.platform-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.platform-card{
+
+    background:#FFFFFF;
+
+    border-radius:24px;
+
+    padding:40px 32px;
+
+    text-align:center;
+
+    border:1px solid var(--services-border);
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow-sm);
+
+}
+
+.platform-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--services-shadow-lg);
+
+    border-color:var(--services-primary);
+
+}
+
+.platform-card img{
+
+    width:80px;
+
+    height:80px;
+
+    margin-bottom:25px;
+
+    object-fit:contain;
+
+}
+
+.platform-card h3{
+
+    font-size:24px;
+
+    color:var(--services-heading);
+
+    margin-bottom:18px;
+
+}
+
+.platform-card p{
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:var(--services-text);
+
+    margin-bottom:25px;
+
+}
+
+.platform-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    text-align:left;
+
+}
+
+.platform-card li{
+
+    position:relative;
+
+    padding-left:28px;
+
+    margin-bottom:12px;
+
+    color:var(--services-text);
+
+    line-height:1.7;
+
+}
+
+.platform-card li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--services-success);
+
+    font-weight:700;
+
+}
+
+/*=========================================================
+    AWS / AZURE / GCP ACCENTS
+=========================================================*/
+
+.platform-card:nth-child(1){
+
+    border-top:5px solid #FF9900;
+
+}
+
+.platform-card:nth-child(2){
+
+    border-top:5px solid #0078D4;
+
+}
+
+.platform-card:nth-child(3){
+
+    border-top:5px solid #4285F4;
+
+}
+
+.platform-card:nth-child(1):hover{
+
+    box-shadow:0 20px 45px rgba(255,153,0,.18);
+
+}
+
+.platform-card:nth-child(2):hover{
+
+    box-shadow:0 20px 45px rgba(0,120,212,.18);
+
+}
+
+.platform-card:nth-child(3):hover{
+
+    box-shadow:0 20px 45px rgba(66,133,244,.18);
+
+}
+
+/*=========================================================
+    CLOUD BENEFITS
+=========================================================*/
+
+.cloud-benefits{
+
+    background:#FFFFFF;
+
+}
+
+.benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.benefit-card{
+
+    background:#FFFFFF;
+
+    padding:36px 28px;
+
+    border-radius:22px;
+
+    border:1px solid var(--services-border);
+
+    text-align:center;
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow-sm);
+
+}
+
+.benefit-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--services-primary);
+
+    box-shadow:var(--services-shadow-lg);
+
+}
+
+.benefit-card i{
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0 auto 24px;
+
+    border-radius:50%;
+
+    font-size:28px;
+
+    color:#FFFFFF;
+
+    background:linear-gradient(
+        135deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+}
+
+.benefit-card h4{
+
+    font-size:22px;
+
+    color:var(--services-heading);
+
+    margin-bottom:16px;
+
+}
+
+.benefit-card p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:var(--services-text);
+
+}
+
+/*=========================================================
+    PLATFORM ICON ANIMATIONS
+=========================================================*/
+
+.platform-card:hover img{
+
+    transform:rotate(-6deg) scale(1.08);
+
+    transition:.4s ease;
+
+}
+
+.benefit-card:hover i{
+
+    transform:scale(1.12);
+
+    transition:.35s ease;
+
+}
+
+.feature-item:hover i{
+
+    transform:scale(1.2);
+
+}
+
+/*=========================================================
+    END OF PART 2
+
+    Next:
+    services.css – Part 3
+
+    ✔ DevOps Engineering
+    ✔ Cyber Security
+    ✔ Software Development
+    ✔ Managed IT Services
+
+=========================================================*/
+
+/*=========================================================
+    DEVOPS ENGINEERING SERVICES
+=========================================================*/
+
+.devops-services{
+
+    background:#FFFFFF;
+
+}
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.service-content h3{
+
+    font-size:34px;
+
+    color:var(--services-heading);
+
+    margin-bottom:25px;
+
+    line-height:1.3;
+
+}
+
+.service-content p{
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:var(--services-text);
+
+    margin-bottom:35px;
+
+}
+
+.service-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.service-features .feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 20px;
+
+    background:#FFFFFF;
+
+    border:1px solid var(--services-border);
+
+    border-radius:16px;
+
+    transition:var(--services-transition);
+
+}
+
+.service-features .feature-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--services-primary);
+
+    box-shadow:var(--services-shadow);
+
+}
+
+.service-features i{
+
+    color:var(--services-success);
+
+    font-size:18px;
+
+}
+
+.service-image{
+
+    text-align:center;
+
+}
+
+.service-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+    transition:var(--services-transition);
+
+}
+
+.service-image img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/*=========================================================
+    CYBER SECURITY
+=========================================================*/
+
+.security-services{
+
+    background:#F8FAFC;
+
+}
+
+.security-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.security-card{
+
+    background:#FFFFFF;
+
+    padding:40px 32px;
+
+    border-radius:22px;
+
+    border:1px solid var(--services-border);
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow-sm);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.security-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+}
+
+.security-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--services-shadow-lg);
+
+}
+
+.security-card i{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+    color:#FFFFFF;
+
+    font-size:28px;
+
+    margin-bottom:24px;
+
+}
+
+.security-card h3{
+
+    font-size:24px;
+
+    color:var(--services-heading);
+
+    margin-bottom:16px;
+
+}
+
+.security-card p{
+
+    line-height:1.9;
+
+    color:var(--services-text);
+
+}
+
+/*=========================================================
+    SOFTWARE DEVELOPMENT
+=========================================================*/
+
+.software-services{
+
+    background:#FFFFFF;
+
+}
+
+.software-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.software-card{
+
+    background:#FFFFFF;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    border:1px solid var(--services-border);
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow-sm);
+
+}
+
+.software-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--services-shadow-lg);
+
+}
+
+.software-card img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    margin-bottom:24px;
+
+    transition:var(--services-transition);
+
+}
+
+.software-card:hover img{
+
+    transform:scale(1.1);
+
+}
+
+.software-card h3{
+
+    font-size:24px;
+
+    color:var(--services-heading);
+
+    margin-bottom:18px;
+
+}
+
+.software-card p{
+
+    line-height:1.8;
+
+    color:var(--services-text);
+
+}
+
+/*=========================================================
+    MANAGED IT SERVICES
+=========================================================*/
+
+.managed-services{
+
+    background:#F8FAFC;
+
+}
+
+.managed-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.managed-item{
+
+    display:flex;
+
+    gap:22px;
+
+    align-items:flex-start;
+
+    background:#FFFFFF;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    border:1px solid var(--services-border);
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow-sm);
+
+}
+
+.managed-item:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--services-shadow-lg);
+
+    border-color:var(--services-primary);
+
+}
+
+.managed-item i{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    flex-shrink:0;
+
+    background:linear-gradient(
+        135deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+    color:#FFFFFF;
+
+    font-size:28px;
+
+}
+
+.managed-item h3{
+
+    font-size:24px;
+
+    color:var(--services-heading);
+
+    margin-bottom:12px;
+
+}
+
+.managed-item p{
+
+    line-height:1.8;
+
+    color:var(--services-text);
+
+}
+
+/*=========================================================
+    SHARED HOVER EFFECTS
+=========================================================*/
+
+.security-card:hover i,
+
+.managed-item:hover i,
+
+.software-card:hover img,
+
+.service-features .feature-item:hover i{
+
+    transform:scale(1.08);
+
+    transition:.35s ease;
+
+}
+
+.security-card,
+
+.software-card,
+
+.managed-item,
+
+.service-features .feature-item{
+
+    will-change:transform;
+
+}
+
+/*=========================================================
+    END OF PART 3
+
+    Next:
+    services.css – Part 4
+
+    ✔ Industries We Serve
+    ✔ Technology Stack
+    ✔ Delivery Process
+    ✔ Why Choose Intelligent Cloud
+
+=========================================================*/
+
+/*=========================================================
+    INDUSTRIES WE SERVE
+=========================================================*/
+
+.industries{
+
+    background:var(--services-white);
+
+}
+
+.industries-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+}
+
+.industry-card{
+
+    background:#FFFFFF;
+
+    padding:40px 30px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    border:1px solid var(--services-border);
+
+    box-shadow:var(--services-shadow-sm);
+
+    transition:var(--services-transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.industry-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+    transition:.45s ease;
+
+}
+
+.industry-card:hover::before{
+
+    left:0;
+
+}
+
+.industry-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--services-shadow-lg);
+
+}
+
+.industry-card i{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+    color:#FFFFFF;
+
+    font-size:32px;
+
+}
+
+.industry-card h3{
+
+    font-size:24px;
+
+    color:var(--services-heading);
+
+    margin-bottom:16px;
+
+}
+
+.industry-card p{
+
+    color:var(--services-text);
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+    TECHNOLOGY STACK
+=========================================================*/
+
+.technology-stack{
+
+    background:#F8FAFC;
+
+}
+
+.tech-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+
+.tech-card{
+
+    background:#FFFFFF;
+
+    border-radius:20px;
+
+    padding:32px 24px;
+
+    text-align:center;
+
+    border:1px solid var(--services-border);
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow-sm);
+
+}
+
+.tech-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--services-shadow-lg);
+
+    border-color:var(--services-primary);
+
+}
+
+.tech-card img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    margin-bottom:18px;
+
+    transition:var(--services-transition);
+
+}
+
+.tech-card:hover img{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+.tech-card h4{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:var(--services-heading);
+
+}
+
+/*=========================================================
+    DELIVERY PROCESS
+=========================================================*/
+
+.delivery-process{
+
+    background:#FFFFFF;
+
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+    position:relative;
+
+}
+
+.process-card{
+
+    background:#FFFFFF;
+
+    padding:40px 28px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    border:1px solid var(--services-border);
+
+    box-shadow:var(--services-shadow-sm);
+
+    transition:var(--services-transition);
+
+    position:relative;
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--services-shadow-lg);
+
+}
+
+.process-number{
+
+    width:72px;
+
+    height:72px;
+
+    margin:0 auto 24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+    color:#FFFFFF;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.process-card h3{
+
+    font-size:22px;
+
+    color:var(--services-heading);
+
+    margin-bottom:18px;
+
+}
+
+.process-card p{
+
+    color:var(--services-text);
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+    WHY CHOOSE ITC
+=========================================================*/
+
+.why-itc{
+
+    background:#F8FAFC;
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.why-card{
+
+    background:#FFFFFF;
+
+    padding:38px 28px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    border:1px solid var(--services-border);
+
+    transition:var(--services-transition);
+
+    box-shadow:var(--services-shadow-sm);
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--services-primary);
+
+    box-shadow:var(--services-shadow-lg);
+
+}
+
+.why-card i{
+
+    width:74px;
+
+    height:74px;
+
+    margin:0 auto 24px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+    color:#FFFFFF;
+
+    font-size:28px;
+
+    transition:var(--services-transition);
+
+}
+
+.why-card:hover i{
+
+    transform:scale(1.12) rotate(-6deg);
+
+}
+
+.why-card h3{
+
+    font-size:22px;
+
+    color:var(--services-heading);
+
+    margin-bottom:16px;
+
+}
+
+.why-card p{
+
+    color:var(--services-text);
+
+    line-height:1.8;
+
+}
+
+/*=========================================================
+    SECTION ANIMATIONS
+=========================================================*/
+
+.industry-card,
+.tech-card,
+.process-card,
+.why-card{
+
+    will-change:transform;
+
+}
+
+.industry-card:hover i,
+.tech-card:hover img,
+.process-card:hover .process-number,
+.why-card:hover i{
+
+    transition:.35s ease;
+
+}
+
+.process-card:hover .process-number{
+
+    transform:scale(1.08);
+
+}
+
+/*=========================================================
+    END OF PART 4
+
+    Next:
+    services.css – Part 5
+
+    ✔ FAQ
+    ✔ Premium CTA
+    ✔ Footer
+    ✔ Scroll-to-Top
+    ✔ Page Animations
+    ✔ Responsive Refinements
+    ✔ Accessibility
+    ✔ End of services.css
+
+=========================================================*/
+
+/*=========================================================
+    FREQUENTLY ASKED QUESTIONS
+=========================================================*/
+
+.services-faq{
+
+    background:#FFFFFF;
+
+}
+
+.faq-container{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+.faq-item{
+
+    margin-bottom:20px;
+
+    background:#FFFFFF;
+
+    border:1px solid var(--services-border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--services-shadow-sm);
+
+    transition:var(--services-transition);
+
+}
+
+.faq-item:hover{
+
+    box-shadow:var(--services-shadow);
+
+}
+
+.faq-item.active{
+
+    border-color:var(--services-primary);
+
+}
+
+.faq-question{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px 28px;
+
+    background:#FFFFFF;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600
+
+/*=========================================================
+    FREQUENTLY ASKED QUESTIONS (FAQ)
+=========================================================*/
+
+.services-faq{
+
+    background:#FFFFFF;
+
+}
+
+.faq-container{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+.faq-item{
+
+    background:#FFFFFF;
+
+    border:1px solid var(--services-border);
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--services-shadow-sm);
+
+    transition:var(--services-transition);
+
+}
+
+.faq-item:hover{
+
+    box-shadow:var(--services-shadow);
+
+    border-color:var(--services-primary);
+
+}
+
+.faq-item.active{
+
+    border-color:var(--services-primary);
+
+}
+
+.faq-question{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:26px 30px;
+
+    background:#FFFFFF;
+
+    border:none;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--services-heading);
+
+    transition:var(--services-transition);
+
+}
+
+.faq-question:hover{
+
+    background:#F8FAFC;
+
+}
+
+.faq-question i{
+
+    font-size:18px;
+
+    color:var(--services-primary);
+
+    transition:transform .35s ease;
+
+}
+
+.faq-item.active .faq-question i{
+
+    transform:rotate(45deg);
+
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+    background:#FFFFFF;
+
+}
+
+.faq-item.active .faq-answer{
+
+    max-height:350px;
+
+}
+
+.faq-answer p{
+
+    padding:0 30px 30px;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:var(--services-text);
+
+}
+
+/*=========================================================
+    PREMIUM CALL TO ACTION
+=========================================================*/
+
+.services-cta{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:110px 0;
+
+    background:linear-gradient(
+        135deg,
+        #031B4E,
+        #0056D2,
+        #00AEEF
+    );
+
+    color:#FFFFFF;
+
+}
+
+.services-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at top right,
+        rgba(255,255,255,.15),
+        transparent 40%),
+
+        radial-gradient(circle at bottom left,
+        rgba(255,255,255,.08),
+        transparent 45%);
+
+}
+
+.services-cta .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.cta-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.cta-content .section-tag{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    margin-bottom:24px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+}
+
+.cta-content h2{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    margin-bottom:24px;
+
+    color:#FFFFFF;
+
+}
+
+.cta-content p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.92);
+
+    max-width:760px;
+
+    margin:0 auto 40px;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:45px;
+
+}
+
+.cta-buttons .btn-primary{
+
+    background:#FFFFFF;
+
+    color:var(--services-primary);
+
+}
+
+.cta-buttons .btn-primary:hover{
+
+    background:#F3F4F6;
+
+}
+
+.cta-buttons .btn-secondary{
+
+    background:transparent;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    color:#FFFFFF;
+
+}
+
+.cta-buttons .btn-secondary:hover{
+
+    background:#FFFFFF;
+
+    color:var(--services-primary);
+
+}
+
+.cta-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+.cta-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.cta-feature i{
+
+    color:#9EF7C8;
+
+    font-size:18px;
+
+}
+
+.cta-feature span{
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/*=========================================================
+    FOOTER ENHANCEMENTS
+=========================================================*/
+
+.footer{
+
+    background:#0F172A;
+
+}
+
+.footer-top{
+
+    padding:80px 0 40px;
+
+}
+
+.footer-column h3{
+
+    color:#FFFFFF;
+
+    margin-bottom:24px;
+
+}
+
+.footer-column p,
+
+.footer-links a,
+
+.footer-contact a,
+
+.footer-contact span{
+
+    color:#CBD5E1;
+
+}
+
+.footer-links a{
+
+    transition:var(--services-transition);
+
+}
+
+.footer-links a:hover{
+
+    color:#FFFFFF;
+
+    padding-left:8px;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:14px;
+
+    margin-top:25px;
+
+}
+
+.footer-social a{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:#FFFFFF;
+
+    transition:var(--services-transition);
+
+}
+
+.footer-social a:hover{
+
+    background:var(--services-primary);
+
+    transform:translateY(-5px);
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:24px 0;
+
+}
+
+.footer-bottom-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-bottom p,
+
+.footer-bottom-links a{
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+.footer-bottom-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.footer-bottom-links span{
+
+    color:#64748B;
+
+}
+
+/*=========================================================
+    SCROLL TO TOP BUTTON
+=========================================================*/
+
+.scroll-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:56px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--services-primary),
+        var(--services-secondary)
+    );
+
+    color:#FFFFFF;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:20px;
+
+    box-shadow:var(--services-shadow-lg);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(25px);
+
+    transition:var(--services-transition);
+
+    z-index:999;
+
+}
+
+.scroll-top.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.scroll-top:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/*=========================================================
+    ENTRANCE ANIMATIONS
+=========================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-50px);
+
+   
