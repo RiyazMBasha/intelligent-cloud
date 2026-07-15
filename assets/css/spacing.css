@@ -1,0 +1,662 @@
+/*==============================================================================
+    Intelligent Technology Company (ITC)
+    Enterprise Design System
+
+    File        : spacing.css
+    Version     : 3.1
+    Description : Global Spacing Utility System
+
+    Dependencies:
+    - variables.css
+==============================================================================*/
+
+/*==============================================================================
+    MARGIN UTILITIES
+==============================================================================*/
+
+/* All Sides */
+
+.m-0  { margin: 0 !important; }
+.m-1  { margin: var(--space-1) !important; }
+.m-2  { margin: var(--space-2) !important; }
+.m-3  { margin: var(--space-3) !important; }
+.m-4  { margin: var(--space-4) !important; }
+.m-5  { margin: var(--space-5) !important; }
+.m-6  { margin: var(--space-6) !important; }
+.m-8  { margin: var(--space-8) !important; }
+.m-10 { margin: var(--space-10) !important; }
+.m-12 { margin: var(--space-12) !important; }
+.m-16 { margin: var(--space-16) !important; }
+.m-20 { margin: var(--space-20) !important; }
+.m-24 { margin: var(--space-24) !important; }
+.m-32 { margin: var(--space-32) !important; }
+
+/*==============================================================================
+    MARGIN X
+==============================================================================*/
+
+.mx-0  { margin-inline: 0 !important; }
+.mx-1  { margin-inline: var(--space-1) !important; }
+.mx-2  { margin-inline: var(--space-2) !important; }
+.mx-3  { margin-inline: var(--space-3) !important; }
+.mx-4  { margin-inline: var(--space-4) !important; }
+.mx-5  { margin-inline: var(--space-5) !important; }
+.mx-6  { margin-inline: var(--space-6) !important; }
+.mx-8  { margin-inline: var(--space-8) !important; }
+.mx-10 { margin-inline: var(--space-10) !important; }
+.mx-12 { margin-inline: var(--space-12) !important; }
+.mx-16 { margin-inline: var(--space-16) !important; }
+.mx-20 { margin-inline: var(--space-20) !important; }
+.mx-24 { margin-inline: var(--space-24) !important; }
+.mx-32 { margin-inline: var(--space-32) !important; }
+
+/*==============================================================================
+    MARGIN Y
+==============================================================================*/
+
+.my-0  { margin-block: 0 !important; }
+.my-1  { margin-block: var(--space-1) !important; }
+.my-2  { margin-block: var(--space-2) !important; }
+.my-3  { margin-block: var(--space-3) !important; }
+.my-4  { margin-block: var(--space-4) !important; }
+.my-5  { margin-block: var(--space-5) !important; }
+.my-6  { margin-block: var(--space-6) !important; }
+.my-8  { margin-block: var(--space-8) !important; }
+.my-10 { margin-block: var(--space-10) !important; }
+.my-12 { margin-block: var(--space-12) !important; }
+.my-16 { margin-block: var(--space-16) !important; }
+.my-20 { margin-block: var(--space-20) !important; }
+.my-24 { margin-block: var(--space-24) !important; }
+.my-32 { margin-block: var(--space-32) !important; }
+
+/*==============================================================================
+    MARGIN TOP
+==============================================================================*/
+
+.mt-0  { margin-top: 0 !important; }
+.mt-1  { margin-top: var(--space-1) !important; }
+.mt-2  { margin-top: var(--space-2) !important; }
+.mt-3  { margin-top: var(--space-3) !important; }
+.mt-4  { margin-top: var(--space-4) !important; }
+.mt-5  { margin-top: var(--space-5) !important; }
+.mt-6  { margin-top: var(--space-6) !important; }
+.mt-8  { margin-top: var(--space-8) !important; }
+.mt-10 { margin-top: var(--space-10) !important; }
+.mt-12 { margin-top: var(--space-12) !important; }
+.mt-16 { margin-top: var(--space-16) !important; }
+.mt-20 { margin-top: var(--space-20) !important; }
+.mt-24 { margin-top: var(--space-24) !important; }
+.mt-32 { margin-top: var(--space-32) !important; }
+
+/*==============================================================================
+    MARGIN BOTTOM
+==============================================================================*/
+
+.mb-0  { margin-bottom: 0 !important; }
+.mb-1  { margin-bottom: var(--space-1) !important; }
+.mb-2  { margin-bottom: var(--space-2) !important; }
+.mb-3  { margin-bottom: var(--space-3) !important; }
+.mb-4  { margin-bottom: var(--space-4) !important; }
+.mb-5  { margin-bottom: var(--space-5) !important; }
+.mb-6  { margin-bottom: var(--space-6) !important; }
+.mb-8  { margin-bottom: var(--space-8) !important; }
+.mb-10 { margin-bottom: var(--space-10) !important; }
+.mb-12 { margin-bottom: var(--space-12) !important; }
+.mb-16 { margin-bottom: var(--space-16) !important; }
+.mb-20 { margin-bottom: var(--space-20) !important; }
+.mb-24 { margin-bottom: var(--space-24) !important; }
+.mb-32 { margin-bottom: var(--space-32) !important; }
+
+/*==============================================================================
+    MARGIN START / END (RTL FRIENDLY)
+==============================================================================*/
+
+.ms-0 { margin-inline-start: 0 !important; }
+.ms-1 { margin-inline-start: var(--space-1) !important; }
+.ms-2 { margin-inline-start: var(--space-2) !important; }
+.ms-3 { margin-inline-start: var(--space-3) !important; }
+.ms-4 { margin-inline-start: var(--space-4) !important; }
+.ms-5 { margin-inline-start: var(--space-5) !important; }
+.ms-6 { margin-inline-start: var(--space-6) !important; }
+.ms-8 { margin-inline-start: var(--space-8) !important; }
+
+.me-0 { margin-inline-end: 0 !important; }
+.me-1 { margin-inline-end: var(--space-1) !important; }
+.me-2 { margin-inline-end: var(--space-2) !important; }
+.me-3 { margin-inline-end: var(--space-3) !important; }
+.me-4 { margin-inline-end: var(--space-4) !important; }
+.me-5 { margin-inline-end: var(--space-5) !important; }
+.me-6 { margin-inline-end: var(--space-6) !important; }
+.me-8 { margin-inline-end: var(--space-8) !important; }
+
+/*==============================================================================
+    AUTO MARGINS
+==============================================================================*/
+
+.m-auto { margin: auto !important; }
+
+.mx-auto {
+
+    margin-inline: auto !important;
+
+}
+
+.ms-auto {
+
+    margin-inline-start: auto !important;
+
+}
+
+.me-auto {
+
+    margin-inline-end: auto !important;
+
+}
+
+/*==============================================================================
+    PADDING UTILITIES
+==============================================================================*/
+
+.p-0  { padding: 0 !important; }
+.p-1  { padding: var(--space-1) !important; }
+.p-2  { padding: var(--space-2) !important; }
+.p-3  { padding: var(--space-3) !important; }
+.p-4  { padding: var(--space-4) !important; }
+.p-5  { padding: var(--space-5) !important; }
+.p-6  { padding: var(--space-6) !important; }
+.p-8  { padding: var(--space-8) !important; }
+.p-10 { padding: var(--space-10) !important; }
+.p-12 { padding: var(--space-12) !important; }
+.p-16 { padding: var(--space-16) !important; }
+.p-20 { padding: var(--space-20) !important; }
+.p-24 { padding: var(--space-24) !important; }
+.p-32 { padding: var(--space-32) !important; }
+
+/*==============================================================================
+    PADDING X & Y
+==============================================================================*/
+
+.px-0 { padding-inline: 0 !important; }
+.px-1 { padding-inline: var(--space-1) !important; }
+.px-2 { padding-inline: var(--space-2) !important; }
+.px-3 { padding-inline: var(--space-3) !important; }
+.px-4 { padding-inline: var(--space-4) !important; }
+.px-5 { padding-inline: var(--space-5) !important; }
+.px-6 { padding-inline: var(--space-6) !important; }
+.px-8 { padding-inline: var(--space-8) !important; }
+
+.py-0 { padding-block: 0 !important; }
+.py-1 { padding-block: var(--space-1) !important; }
+.py-2 { padding-block: var(--space-2) !important; }
+.py-3 { padding-block: var(--space-3) !important; }
+.py-4 { padding-block: var(--space-4) !important; }
+.py-5 { padding-block: var(--space-5) !important; }
+.py-6 { padding-block: var(--space-6) !important; }
+.py-8 { padding-block: var(--space-8) !important; }
+
+/*==============================================================================
+    PART 1 COMPLETE
+
+    Next:
+    ✓ Padding Top
+    ✓ Padding Bottom
+    ✓ Padding Start
+    ✓ Padding End
+==============================================================================*/
+
+/*==============================================================================
+    PADDING TOP
+==============================================================================*/
+
+.pt-0  { padding-top: 0 !important; }
+.pt-1  { padding-top: var(--space-1) !important; }
+.pt-2  { padding-top: var(--space-2) !important; }
+.pt-3  { padding-top: var(--space-3) !important; }
+.pt-4  { padding-top: var(--space-4) !important; }
+.pt-5  { padding-top: var(--space-5) !important; }
+.pt-6  { padding-top: var(--space-6) !important; }
+.pt-8  { padding-top: var(--space-8) !important; }
+.pt-10 { padding-top: var(--space-10) !important; }
+.pt-12 { padding-top: var(--space-12) !important; }
+.pt-16 { padding-top: var(--space-16) !important; }
+.pt-20 { padding-top: var(--space-20) !important; }
+.pt-24 { padding-top: var(--space-24) !important; }
+.pt-32 { padding-top: var(--space-32) !important; }
+
+/*==============================================================================
+    PADDING BOTTOM
+==============================================================================*/
+
+.pb-0  { padding-bottom: 0 !important; }
+.pb-1  { padding-bottom: var(--space-1) !important; }
+.pb-2  { padding-bottom: var(--space-2) !important; }
+.pb-3  { padding-bottom: var(--space-3) !important; }
+.pb-4  { padding-bottom: var(--space-4) !important; }
+.pb-5  { padding-bottom: var(--space-5) !important; }
+.pb-6  { padding-bottom: var(--space-6) !important; }
+.pb-8  { padding-bottom: var(--space-8) !important; }
+.pb-10 { padding-bottom: var(--space-10) !important; }
+.pb-12 { padding-bottom: var(--space-12) !important; }
+.pb-16 { padding-bottom: var(--space-16) !important; }
+.pb-20 { padding-bottom: var(--space-20) !important; }
+.pb-24 { padding-bottom: var(--space-24) !important; }
+.pb-32 { padding-bottom: var(--space-32) !important; }
+
+/*==============================================================================
+    PADDING START (RTL FRIENDLY)
+==============================================================================*/
+
+.ps-0  { padding-inline-start: 0 !important; }
+.ps-1  { padding-inline-start: var(--space-1) !important; }
+.ps-2  { padding-inline-start: var(--space-2) !important; }
+.ps-3  { padding-inline-start: var(--space-3) !important; }
+.ps-4  { padding-inline-start: var(--space-4) !important; }
+.ps-5  { padding-inline-start: var(--space-5) !important; }
+.ps-6  { padding-inline-start: var(--space-6) !important; }
+.ps-8  { padding-inline-start: var(--space-8) !important; }
+.ps-10 { padding-inline-start: var(--space-10) !important; }
+.ps-12 { padding-inline-start: var(--space-12) !important; }
+.ps-16 { padding-inline-start: var(--space-16) !important; }
+.ps-20 { padding-inline-start: var(--space-20) !important; }
+.ps-24 { padding-inline-start: var(--space-24) !important; }
+.ps-32 { padding-inline-start: var(--space-32) !important; }
+
+/*==============================================================================
+    PADDING END (RTL FRIENDLY)
+==============================================================================*/
+
+.pe-0  { padding-inline-end: 0 !important; }
+.pe-1  { padding-inline-end: var(--space-1) !important; }
+.pe-2  { padding-inline-end: var(--space-2) !important; }
+.pe-3  { padding-inline-end: var(--space-3) !important; }
+.pe-4  { padding-inline-end: var(--space-4) !important; }
+.pe-5  { padding-inline-end: var(--space-5) !important; }
+.pe-6  { padding-inline-end: var(--space-6) !important; }
+.pe-8  { padding-inline-end: var(--space-8) !important; }
+.pe-10 { padding-inline-end: var(--space-10) !important; }
+.pe-12 { padding-inline-end: var(--space-12) !important; }
+.pe-16 { padding-inline-end: var(--space-16) !important; }
+.pe-20 { padding-inline-end: var(--space-20) !important; }
+.pe-24 { padding-inline-end: var(--space-24) !important; }
+.pe-32 { padding-inline-end: var(--space-32) !important; }
+
+/*==============================================================================
+    PART 2 COMPLETE
+
+    Next:
+    ✓ Gap Utilities
+    ✓ Row Gap Utilities
+    ✓ Column Gap Utilities
+    ✓ Stack Utilities
+    ✓ Inline Stack
+    ✓ Cluster Layout
+    ✓ Section Helpers
+    ✓ Container Helpers
+    ✓ Spacer Utilities
+    ✓ Responsive Spacing
+    ✓ Print Spacing
+    ✓ End of spacing.css
+==============================================================================*/
+
+
+/*==============================================================================
+    GAP UTILITIES
+==============================================================================*/
+
+.gap-0  { gap: 0 !important; }
+.gap-1  { gap: var(--space-1) !important; }
+.gap-2  { gap: var(--space-2) !important; }
+.gap-3  { gap: var(--space-3) !important; }
+.gap-4  { gap: var(--space-4) !important; }
+.gap-5  { gap: var(--space-5) !important; }
+.gap-6  { gap: var(--space-6) !important; }
+.gap-8  { gap: var(--space-8) !important; }
+.gap-10 { gap: var(--space-10) !important; }
+.gap-12 { gap: var(--space-12) !important; }
+.gap-16 { gap: var(--space-16) !important; }
+.gap-20 { gap: var(--space-20) !important; }
+.gap-24 { gap: var(--space-24) !important; }
+
+/*==============================================================================
+    ROW GAP
+==============================================================================*/
+
+.row-gap-0  { row-gap: 0 !important; }
+.row-gap-1  { row-gap: var(--space-1) !important; }
+.row-gap-2  { row-gap: var(--space-2) !important; }
+.row-gap-3  { row-gap: var(--space-3) !important; }
+.row-gap-4  { row-gap: var(--space-4) !important; }
+.row-gap-5  { row-gap: var(--space-5) !important; }
+.row-gap-6  { row-gap: var(--space-6) !important; }
+.row-gap-8  { row-gap: var(--space-8) !important; }
+.row-gap-10 { row-gap: var(--space-10) !important; }
+.row-gap-12 { row-gap: var(--space-12) !important; }
+
+/*==============================================================================
+    COLUMN GAP
+==============================================================================*/
+
+.column-gap-0  { column-gap: 0 !important; }
+.column-gap-1  { column-gap: var(--space-1) !important; }
+.column-gap-2  { column-gap: var(--space-2) !important; }
+.column-gap-3  { column-gap: var(--space-3) !important; }
+.column-gap-4  { column-gap: var(--space-4) !important; }
+.column-gap-5  { column-gap: var(--space-5) !important; }
+.column-gap-6  { column-gap: var(--space-6) !important; }
+.column-gap-8  { column-gap: var(--space-8) !important; }
+.column-gap-10 { column-gap: var(--space-10) !important; }
+.column-gap-12 { column-gap: var(--space-12) !important; }
+
+/*==============================================================================
+    STACK UTILITIES
+==============================================================================*/
+
+.stack-xs > * + * {
+
+    margin-top: var(--space-2);
+
+}
+
+.stack-sm > * + * {
+
+    margin-top: var(--space-3);
+
+}
+
+.stack > * + * {
+
+    margin-top: var(--space-4);
+
+}
+
+.stack-lg > * + * {
+
+    margin-top: var(--space-6);
+
+}
+
+.stack-xl > * + * {
+
+    margin-top: var(--space-8);
+
+}
+
+/*==============================================================================
+    INLINE STACK
+==============================================================================*/
+
+.inline-stack {
+
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: var(--space-4);
+
+}
+
+/*==============================================================================
+    CLUSTER LAYOUT
+==============================================================================*/
+
+.cluster {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: var(--space-4);
+
+}
+
+.cluster-center {
+
+    justify-content: center;
+
+}
+
+.cluster-between {
+
+    justify-content: space-between;
+
+}
+
+.cluster-end {
+
+    justify-content: flex-end;
+
+}
+
+.cluster-start {
+
+    justify-content: flex-start;
+
+}
+
+/*==============================================================================
+    SECTION HELPERS
+==============================================================================*/
+
+.section-spacing-xs {
+
+    padding-block: var(--space-8);
+
+}
+
+.section-spacing-sm {
+
+    padding-block: var(--space-12);
+
+}
+
+.section-spacing {
+
+    padding-block: var(--space-16);
+
+}
+
+.section-spacing-lg {
+
+    padding-block: var(--space-20);
+
+}
+
+.section-spacing-xl {
+
+    padding-block: var(--space-24);
+
+}
+
+/*==============================================================================
+    CONTAINER HELPERS
+==============================================================================*/
+
+.content-narrow {
+
+    max-width: 720px;
+
+    margin-inline: auto;
+
+}
+
+.content-medium {
+
+    max-width: 960px;
+
+    margin-inline: auto;
+
+}
+
+.content-wide {
+
+    max-width: 1200px;
+
+    margin-inline: auto;
+
+}
+
+/*==============================================================================
+    SPACER UTILITIES
+==============================================================================*/
+
+.spacer-xs {
+
+    height: var(--space-4);
+
+}
+
+.spacer-sm {
+
+    height: var(--space-8);
+
+}
+
+.spacer {
+
+    height: var(--space-12);
+
+}
+
+.spacer-lg {
+
+    height: var(--space-16);
+
+}
+
+.spacer-xl {
+
+    height: var(--space-24);
+
+}
+
+/*==============================================================================
+    RESPONSIVE SPACING
+==============================================================================*/
+
+@media (max-width: 992px){
+
+    .section-spacing,
+    .section-spacing-lg{
+
+        padding-block: var(--space-12);
+
+    }
+
+    .gap-lg{
+
+        gap: var(--space-6);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .section-spacing{
+
+        padding-block: var(--space-10);
+
+    }
+
+    .stack-lg > * + *{
+
+        margin-top: var(--space-5);
+
+    }
+
+    .cluster{
+
+        gap: var(--space-3);
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .section-spacing{
+
+        padding-block: var(--space-8);
+
+    }
+
+    .inline-stack{
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .cluster{
+
+        justify-content: center;
+
+    }
+
+}
+
+/*==============================================================================
+    PRINT SPACING
+==============================================================================*/
+
+@media print{
+
+    [class*="m-"],
+    [class*="p-"]{
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+    }
+
+    .section-spacing,
+    .section-spacing-sm,
+    .section-spacing-lg{
+
+        padding-block: 1rem !important;
+
+    }
+
+}
+
+/*==============================================================================
+    PRODUCTION REFINEMENTS
+==============================================================================*/
+
+:where(.stack,
+       .stack-sm,
+       .stack-lg,
+       .cluster,
+       .inline-stack){
+
+    isolation: isolate;
+
+}
+
+:where(.gap-0,
+       .gap-1,
+       .gap-2,
+       .gap-3,
+       .gap-4,
+       .gap-5,
+       .gap-6,
+       .gap-8){
+
+    min-width: 0;
+
+}
+
+/*==============================================================================
+    END OF spacing.css
+
+    Enterprise Design System
+    Version : 3.1
+==============================================================================*/

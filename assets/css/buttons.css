@@ -1,0 +1,2023 @@
+/*==============================================================================
+    Intelligent Technology Company (ITC)
+    Enterprise Design System
+
+    File        : buttons.css
+    Version     : 3.1
+    Description : Enterprise Button System
+
+    Dependencies:
+    - variables.css
+    - typography.css
+    - spacing.css
+==============================================================================*/
+
+/*==============================================================================
+    BUTTON RESET
+==============================================================================*/
+
+button,
+.btn{
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font:inherit;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    text-decoration:none;
+
+}
+
+/*==============================================================================
+    BASE BUTTON
+==============================================================================*/
+
+.btn{
+
+    /* Button Variables */
+
+    --btn-bg: var(--primary);
+
+    --btn-color: var(--white);
+
+    --btn-border: transparent;
+
+    --btn-hover-bg: var(--primary-dark);
+
+    --btn-shadow: var(--shadow-md);
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.65rem;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:.875rem 1.75rem;
+
+    min-height:48px;
+
+    border:1px solid var(--btn-border);
+
+    border-radius:var(--radius-md);
+
+    background:var(--btn-bg);
+
+    color:var(--btn-color);
+
+    font-family:var(--font-primary);
+
+    font-size:var(--fs-base);
+
+    font-weight:var(--fw-semi-bold);
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    text-align:center;
+
+    vertical-align:middle;
+
+    transition:
+
+        background-color var(--transition-fast),
+
+        color var(--transition-fast),
+
+        border-color var(--transition-fast),
+
+        transform var(--transition-fast),
+
+        box-shadow var(--transition-fast),
+
+        opacity var(--transition-fast);
+
+}
+
+.btn:hover{
+
+    background:var(--btn-hover-bg);
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--btn-shadow);
+
+}
+
+.btn:active{
+
+    transform:translateY(0);
+
+}
+
+.btn:focus-visible{
+
+    outline:none;
+
+    box-shadow:var(--shadow-focus);
+
+}
+
+.btn:disabled,
+
+.btn.is-disabled{
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+    opacity:.55;
+
+}
+
+/*==============================================================================
+    BUTTON SIZES
+==============================================================================*/
+
+.btn-xs{
+
+    min-height:34px;
+
+    padding:.40rem .85rem;
+
+    font-size:var(--fs-xs);
+
+}
+
+.btn-sm{
+
+    min-height:40px;
+
+    padding:.60rem 1rem;
+
+    font-size:var(--fs-sm);
+
+}
+
+.btn-md{
+
+    min-height:48px;
+
+    padding:.875rem 1.75rem;
+
+}
+
+.btn-lg{
+
+    min-height:56px;
+
+    padding:1rem 2.25rem;
+
+    font-size:var(--fs-lg);
+
+}
+
+.btn-xl{
+
+    min-height:64px;
+
+    padding:1.25rem 3rem;
+
+    font-size:var(--fs-xl);
+
+}
+
+/*==============================================================================
+    FULL WIDTH
+==============================================================================*/
+
+.btn-block{
+
+    display:flex;
+
+    width:100%;
+
+}
+
+/*==============================================================================
+    BORDER RADIUS VARIANTS
+==============================================================================*/
+
+.btn-square{
+
+    border-radius:0;
+
+}
+
+.btn-rounded{
+
+    border-radius:999px;
+
+}
+
+.btn-pill{
+
+    border-radius:999px;
+
+    padding-inline:2.5rem;
+
+}
+
+/*==============================================================================
+    ICON BUTTONS
+==============================================================================*/
+
+.btn-icon{
+
+    width:48px;
+
+    height:48px;
+
+    padding:0;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.btn-icon-sm{
+
+    width:40px;
+
+    height:40px;
+
+}
+
+.btn-icon-lg{
+
+    width:56px;
+
+    height:56px;
+
+}
+
+.btn-icon i,
+
+.btn-icon svg{
+
+    font-size:1.15rem;
+
+    flex-shrink:0;
+
+}
+
+/*==============================================================================
+    BUTTON ICON ALIGNMENT
+==============================================================================*/
+
+.btn-icon-left{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.65rem;
+
+}
+
+.btn-icon-right{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.65rem;
+
+}
+
+.btn-icon-right i,
+
+.btn-icon-right svg{
+
+    order:2;
+
+}
+
+/*==============================================================================
+    LOADING BUTTON FOUNDATION
+==============================================================================*/
+
+.btn.is-loading{
+
+    pointer-events:none;
+
+    color:transparent;
+
+}
+
+.btn.is-loading::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-top-color:currentColor;
+
+    border-radius:50%;
+
+    animation:btn-spinner .7s linear infinite;
+
+}
+
+@keyframes btn-spinner{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/*==============================================================================
+    RIPPLE FOUNDATION
+==============================================================================*/
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.08);
+
+    opacity:0;
+
+    transition:opacity var(--transition-fast);
+
+}
+
+.btn:hover::before{
+
+    opacity:1;
+
+}
+
+/*==============================================================================
+    BUTTON TEXT
+==============================================================================*/
+
+.btn-label{
+
+    display:inline-flex;
+
+    align-items:center;
+
+}
+
+.btn .badge{
+
+    margin-left:.5rem;
+
+}
+
+/*==============================================================================
+    PART 1 COMPLETE
+
+    Next:
+    ✓ Primary Button
+    ✓ Secondary Button
+    ✓ Outline Button
+    ✓ Ghost Button
+    ✓ Success Button
+    ✓ Warning Button
+    ✓ Danger Button
+    ✓ Info Button
+    ✓ Dark Button
+    ✓ Light Button
+==============================================================================*/
+
+/*==============================================================================
+    PRIMARY BUTTON
+==============================================================================*/
+
+.btn-primary{
+
+    --btn-bg: var(--primary);
+
+    --btn-color: var(--white);
+
+    --btn-border: var(--primary);
+
+    --btn-hover-bg: var(--primary-dark);
+
+    --btn-shadow: var(--shadow-lg);
+
+}
+
+/*==============================================================================
+    SECONDARY BUTTON
+==============================================================================*/
+
+.btn-secondary{
+
+    --btn-bg: var(--secondary);
+
+    --btn-color: var(--white);
+
+    --btn-border: var(--secondary);
+
+    --btn-hover-bg: var(--secondary-dark);
+
+    --btn-shadow: var(--shadow-lg);
+
+}
+
+/*==============================================================================
+    OUTLINE BUTTON
+==============================================================================*/
+
+.btn-outline{
+
+    --btn-bg: transparent;
+
+    --btn-color: var(--primary);
+
+    --btn-border: var(--primary);
+
+    --btn-hover-bg: var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    color: var(--white);
+
+}
+
+/*==============================================================================
+    GHOST BUTTON
+==============================================================================*/
+
+.btn-ghost{
+
+    --btn-bg: transparent;
+
+    --btn-color: var(--primary);
+
+    --btn-border: transparent;
+
+    --btn-hover-bg: rgba(37,99,235,.10);
+
+    box-shadow:none;
+
+}
+
+.btn-ghost:hover{
+
+    color:var(--primary-dark);
+
+}
+
+/*==============================================================================
+    SUCCESS BUTTON
+==============================================================================*/
+
+.btn-success{
+
+    --btn-bg: var(--success);
+
+    --btn-color: var(--white);
+
+    --btn-border: var(--success);
+
+    --btn-hover-bg: var(--success-dark);
+
+    --btn-shadow: var(--shadow-lg);
+
+}
+
+/*==============================================================================
+    WARNING BUTTON
+==============================================================================*/
+
+.btn-warning{
+
+    --btn-bg: var(--warning);
+
+    --btn-color: var(--gray-900);
+
+    --btn-border: var(--warning);
+
+    --btn-hover-bg: var(--warning-dark);
+
+    --btn-shadow: var(--shadow-lg);
+
+}
+
+.btn-warning:hover{
+
+    color:var(--gray-900);
+
+}
+
+/*==============================================================================
+    DANGER BUTTON
+==============================================================================*/
+
+.btn-danger{
+
+    --btn-bg: var(--danger);
+
+    --btn-color: var(--white);
+
+    --btn-border: var(--danger);
+
+    --btn-hover-bg: var(--danger-dark);
+
+    --btn-shadow: var(--shadow-lg);
+
+}
+
+/*==============================================================================
+    INFO BUTTON
+==============================================================================*/
+
+.btn-info{
+
+    --btn-bg: var(--info);
+
+    --btn-color: var(--white);
+
+    --btn-border: var(--info);
+
+    --btn-hover-bg: var(--info-dark);
+
+    --btn-shadow: var(--shadow-lg);
+
+}
+
+/*==============================================================================
+    DARK BUTTON
+==============================================================================*/
+
+.btn-dark{
+
+    --btn-bg: var(--gray-900);
+
+    --btn-color: var(--white);
+
+    --btn-border: var(--gray-900);
+
+    --btn-hover-bg: #111827;
+
+    --btn-shadow: var(--shadow-lg);
+
+}
+
+/*==============================================================================
+    LIGHT BUTTON
+==============================================================================*/
+
+.btn-light{
+
+    --btn-bg: var(--white);
+
+    --btn-color: var(--gray-900);
+
+    --btn-border: var(--gray-300);
+
+    --btn-hover-bg: var(--gray-100);
+
+    --btn-shadow: var(--shadow-md);
+
+}
+
+/*==============================================================================
+    LINK BUTTON
+==============================================================================*/
+
+.btn-link{
+
+    background:transparent;
+
+    color:var(--primary);
+
+    border:none;
+
+    padding:0;
+
+    min-height:auto;
+
+    box-shadow:none;
+
+}
+
+.btn-link:hover{
+
+    color:var(--primary-dark);
+
+    text-decoration:underline;
+
+    transform:none;
+
+}
+
+/*==============================================================================
+    GRADIENT BUTTON
+==============================================================================*/
+
+.btn-gradient{
+
+    --btn-color: var(--white);
+
+    background:var(--gradient-primary);
+
+    border:none;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.btn-gradient:hover{
+
+    filter:brightness(1.08);
+
+}
+
+/*==============================================================================
+    GLASS BUTTON
+==============================================================================*/
+
+.btn-glass{
+
+    background:rgba(255,255,255,.12);
+
+    color:var(--white);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+}
+
+.btn-glass:hover{
+
+    background:rgba(255,255,255,.20);
+
+}
+
+/*==============================================================================
+    SOFT BUTTON VARIANTS
+==============================================================================*/
+
+.btn-soft-primary{
+
+    background:rgba(37,99,235,.10);
+
+    color:var(--primary);
+
+    border:1px solid rgba(37,99,235,.15);
+
+}
+
+.btn-soft-success{
+
+    background:rgba(22,163,74,.10);
+
+    color:var(--success);
+
+    border:1px solid rgba(22,163,74,.15);
+
+}
+
+.btn-soft-danger{
+
+    background:rgba(220,38,38,.10);
+
+    color:var(--danger);
+
+    border:1px solid rgba(220,38,38,.15);
+
+}
+
+.btn-soft-warning{
+
+    background:rgba(245,158,11,.12);
+
+    color:#92400E;
+
+    border:1px solid rgba(245,158,11,.20);
+
+}
+
+/*==============================================================================
+    BUTTON VARIANT GROUPS
+==============================================================================*/
+
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-warning,
+.btn-danger,
+.btn-info,
+.btn-dark,
+.btn-light,
+.btn-outline,
+.btn-ghost,
+.btn-gradient,
+.btn-glass{
+
+    transition:
+
+        background-color var(--transition-normal),
+
+        border-color var(--transition-normal),
+
+        color var(--transition-normal),
+
+        transform var(--transition-fast),
+
+        box-shadow var(--transition-fast),
+
+        filter var(--transition-fast);
+
+}
+
+/*==============================================================================
+    DARK MODE SUPPORT
+==============================================================================*/
+
+[data-theme="dark"] .btn-light{
+
+    --btn-bg: var(--gray-800);
+
+    --btn-color: var(--white);
+
+    --btn-border: var(--gray-700);
+
+    --btn-hover-bg: var(--gray-700);
+
+}
+
+[data-theme="dark"] .btn-outline{
+
+    --btn-color: var(--white);
+
+    --btn-border: rgba(255,255,255,.35);
+
+}
+
+[data-theme="dark"] .btn-ghost{
+
+    --btn-color: var(--white);
+
+}
+
+/*==============================================================================
+    PART 2 COMPLETE
+
+    Next:
+    ✓ Hover Animations
+    ✓ Active States
+    ✓ Focus Effects
+    ✓ Disabled States
+    ✓ Loading Enhancements
+    ✓ Button Groups
+    ✓ Floating Action Button (FAB)
+    ✓ Social Media Buttons
+    ✓ Scroll-To-Top Button
+==============================================================================*/
+/*==============================================================================
+    HOVER ANIMATIONS
+==============================================================================*/
+
+.btn-hover-lift:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+.btn-hover-grow:hover{
+
+    transform:scale(1.05);
+
+}
+
+.btn-hover-shrink:hover{
+
+    transform:scale(.97);
+
+}
+
+.btn-hover-slide:hover{
+
+    transform:translateX(4px);
+
+}
+
+.btn-hover-glow:hover{
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.15),
+        var(--shadow-lg);
+
+}
+
+/*==============================================================================
+    ACTIVE / PRESSED STATES
+==============================================================================*/
+
+.btn:active{
+
+    transform:translateY(1px);
+
+}
+
+.btn.is-active{
+
+    box-shadow:inset 0 2px 6px rgba(0,0,0,.18);
+
+}
+
+.btn.is-pressed{
+
+    transform:scale(.98);
+
+}
+
+/*==============================================================================
+    LOADING STATES
+==============================================================================*/
+
+.btn.is-loading{
+
+    position:relative;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+.btn.is-loading>*{
+
+    opacity:0;
+
+}
+
+.btn.is-loading::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    border-top-color:currentColor;
+
+    animation:btn-spinner .7s linear infinite;
+
+}
+
+/*==============================================================================
+    BUTTON GROUPS
+==============================================================================*/
+
+.btn-group{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:0;
+
+}
+
+.btn-group .btn{
+
+    border-radius:0;
+
+}
+
+.btn-group .btn:first-child{
+
+    border-top-left-radius:var(--radius-md);
+
+    border-bottom-left-radius:var(--radius-md);
+
+}
+
+.btn-group .btn:last-child{
+
+    border-top-right-radius:var(--radius-md);
+
+    border-bottom-right-radius:var(--radius-md);
+
+}
+
+.btn-group .btn+.btn{
+
+    margin-left:-1px;
+
+}
+
+/* Vertical */
+
+.btn-group-vertical{
+
+    display:inline-flex;
+
+    flex-direction:column;
+
+}
+
+.btn-group-vertical .btn{
+
+    border-radius:0;
+
+}
+
+.btn-group-vertical .btn:first-child{
+
+    border-radius:var(--radius-md) var(--radius-md) 0 0;
+
+}
+
+.btn-group-vertical .btn:last-child{
+
+    border-radius:0 0 var(--radius-md) var(--radius-md);
+
+}
+
+/*==============================================================================
+    FLOATING ACTION BUTTON (FAB)
+==============================================================================*/
+
+.btn-fab{
+
+    position:fixed;
+
+    right:2rem;
+
+    bottom:2rem;
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    box-shadow:var(--shadow-xl);
+
+    z-index:var(--z-fixed);
+
+    transition:all var(--transition-normal);
+
+}
+
+.btn-fab:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+    background:var(--primary-dark);
+
+}
+
+.btn-fab i{
+
+    font-size:1.5rem;
+
+}
+
+/*==============================================================================
+    SOCIAL BUTTONS
+==============================================================================*/
+
+.btn-social{
+
+    width:48px;
+
+    height:48px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:var(--white);
+
+    transition:all var(--transition-fast);
+
+}
+
+.btn-facebook{
+
+    background:#1877F2;
+
+}
+
+.btn-x{
+
+    background:#111111;
+
+}
+
+.btn-linkedin{
+
+    background:#0A66C2;
+
+}
+
+.btn-youtube{
+
+    background:#FF0000;
+
+}
+
+.btn-instagram{
+
+    background:linear-gradient(
+        45deg,
+        #F58529,
+        #DD2A7B,
+        #8134AF,
+        #515BD4
+    );
+
+}
+
+.btn-github{
+
+    background:#24292F;
+
+}
+
+.btn-social:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/*==============================================================================
+    SCROLL TO TOP BUTTON
+==============================================================================*/
+
+.scroll-top{
+
+    position:fixed;
+
+    right:2rem;
+
+    bottom:7rem;
+
+    width:54px;
+
+    height:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    color:var(--white);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:all var(--transition-normal);
+
+    box-shadow:var(--shadow-lg);
+
+    z-index:var(--z-fixed);
+
+}
+
+.scroll-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.scroll-top:hover{
+
+    background:var(--secondary-dark);
+
+    transform:translateY(-4px);
+
+}
+
+/*==============================================================================
+    BUTTON BADGES
+==============================================================================*/
+
+.btn-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:20px;
+
+    height:20px;
+
+    padding:0 .4rem;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.25);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+}
+
+/*==============================================================================
+    ICON ANIMATIONS
+==============================================================================*/
+
+.btn:hover i,
+
+.btn:hover svg{
+
+    transition:transform var(--transition-fast);
+
+}
+
+.btn-icon-right:hover i{
+
+    transform:translateX(4px);
+
+}
+
+.btn-icon-left:hover i{
+
+    transform:translateX(-4px);
+
+}
+
+.btn-fab:hover i{
+
+    transform:rotate(15deg);
+
+}
+
+/*==============================================================================
+    ENTERPRISE POLISH
+==============================================================================*/
+
+.btn{
+
+    will-change:transform;
+
+    backface-visibility:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+.btn:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.18),
+        var(--shadow-focus);
+
+}
+
+/*==============================================================================
+    PART 3 COMPLETE
+
+    Next:
+    ✓ Responsive Buttons
+    ✓ Accessibility Improvements
+    ✓ Reduced Motion
+    ✓ Print Styles
+    ✓ Enterprise Animation Polish
+    ✓ End of buttons.css
+==============================================================================*/
+
+/*==============================================================================
+    RESPONSIVE BUTTONS
+==============================================================================*/
+
+@media (max-width: 1200px){
+
+    .btn-xl{
+
+        min-height:60px;
+
+        padding:1.1rem 2.5rem;
+
+        font-size:var(--fs-lg);
+
+    }
+
+}
+
+@media (max-width: 992px){
+
+    .btn-lg{
+
+        min-height:52px;
+
+        padding:.95rem 2rem;
+
+    }
+
+    .btn-group{
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .btn{
+
+        min-height:46px;
+
+        padding:.8rem 1.5rem;
+
+        font-size:var(--fs-sm);
+
+    }
+
+    .btn-lg{
+
+        min-height:50px;
+
+        padding:.9rem 1.8rem;
+
+    }
+
+    .btn-xl{
+
+        min-height:56px;
+
+        padding:1rem 2rem;
+
+    }
+
+    .btn-block-mobile{
+
+        width:100%;
+
+        display:flex;
+
+    }
+
+    .btn-group{
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:.75rem;
+
+    }
+
+    .btn-group .btn{
+
+        width:100%;
+
+        border-radius:var(--radius-md);
+
+        margin-left:0;
+
+    }
+
+    .btn-fab{
+
+        right:1.5rem;
+
+        bottom:1.5rem;
+
+        width:58px;
+
+        height:58px;
+
+    }
+
+    .scroll-top{
+
+        right:1.5rem;
+
+        bottom:6rem;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .btn-icon{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .btn-fab{
+
+        width:54px;
+
+        height:54px;
+
+    }
+
+}
+
+/*==============================================================================
+    ACCESSIBILITY
+==============================================================================*/
+
+.btn:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.18),
+        var(--shadow-focus);
+
+}
+
+.btn[aria-disabled="true"]{
+
+    pointer-events:none;
+
+    opacity:.55;
+
+}
+
+.btn[aria-busy="true"]{
+
+    cursor:progress;
+
+}
+
+.btn[aria-expanded="true"]{
+
+    box-shadow:var(--shadow-focus);
+
+}
+
+/*==============================================================================
+    HIGH CONTRAST MODE
+==============================================================================*/
+
+@media (prefers-contrast: more){
+
+    .btn{
+
+        border-width:2px;
+
+    }
+
+    .btn-outline{
+
+        border-width:3px;
+
+    }
+
+}
+
+/*==============================================================================
+    REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    .btn,
+    .btn::before,
+    .btn::after,
+    .btn-fab,
+    .scroll-top{
+
+        transition:none !important;
+
+        animation:none !important;
+
+        transform:none !important;
+
+    }
+
+}
+
+/*==============================================================================
+    PRINT STYLES
+==============================================================================*/
+
+@media print{
+
+    .btn,
+    .btn-fab,
+    .scroll-top{
+
+        display:none !important;
+
+    }
+
+}
+
+/*==============================================================================
+    DARK MODE REFINEMENTS
+==============================================================================*/
+
+[data-theme="dark"] .btn-outline{
+
+    color:var(--white);
+
+    border-color:rgba(255,255,255,.25);
+
+}
+
+[data-theme="dark"] .btn-ghost{
+
+    color:var(--white);
+
+}
+
+[data-theme="dark"] .btn-light{
+
+    background:var(--gray-800);
+
+    color:var(--white);
+
+    border-color:var(--gray-700);
+
+}
+
+/*==============================================================================
+    PERFORMANCE
+==============================================================================*/
+
+.btn,
+.btn-fab,
+.scroll-top{
+
+    contain:layout style;
+
+    transform:translateZ(0);
+
+}
+
+.btn img,
+.btn svg{
+
+    flex-shrink:0;
+
+}
+
+/*==============================================================================
+    ENTERPRISE POLISH
+==============================================================================*/
+
+.btn{
+
+    text-transform:none;
+
+    letter-spacing:.01em;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+.btn:hover{
+
+    text-decoration:none;
+
+}
+
+.btn:disabled{
+
+    filter:grayscale(.15);
+
+}
+
+.btn.loading-success{
+
+    background:var(--success);
+
+}
+
+.btn.loading-error{
+
+    background:var(--danger);
+
+}
+
+/*==============================================================================
+    BUTTON ANIMATION HELPERS
+==============================================================================*/
+
+.btn-fade-in{
+
+    animation:btnFadeIn .35s ease-out;
+
+}
+
+.btn-slide-up{
+
+    animation:btnSlideUp .4s ease-out;
+
+}
+
+@keyframes btnFadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes btnSlideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==============================================================================
+    END OF buttons.css
+
+    Enterprise Design System
+    Version : 3.1
+
+==============================================================================*/
+
+/*==============================================================================
+    RESPONSIVE BUTTONS
+==============================================================================*/
+
+@media (max-width: 1200px){
+
+    .btn-xl{
+
+        min-height:60px;
+
+        padding:1.1rem 2.5rem;
+
+        font-size:var(--fs-lg);
+
+    }
+
+}
+
+@media (max-width: 992px){
+
+    .btn-lg{
+
+        min-height:52px;
+
+        padding:.95rem 2rem;
+
+    }
+
+    .btn-group{
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .btn{
+
+        min-height:46px;
+
+        padding:.8rem 1.5rem;
+
+        font-size:var(--fs-sm);
+
+    }
+
+    .btn-lg{
+
+        min-height:50px;
+
+        padding:.9rem 1.8rem;
+
+    }
+
+    .btn-xl{
+
+        min-height:56px;
+
+        padding:1rem 2rem;
+
+    }
+
+    .btn-block-mobile{
+
+        width:100%;
+
+        display:flex;
+
+    }
+
+    .btn-group{
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:.75rem;
+
+    }
+
+    .btn-group .btn{
+
+        width:100%;
+
+        border-radius:var(--radius-md);
+
+        margin-left:0;
+
+    }
+
+    .btn-fab{
+
+        right:1.5rem;
+
+        bottom:1.5rem;
+
+        width:58px;
+
+        height:58px;
+
+    }
+
+    .scroll-top{
+
+        right:1.5rem;
+
+        bottom:6rem;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .btn-icon{
+
+        width:46px;
+
+        height:46px;
+
+    }
+
+    .btn-fab{
+
+        width:54px;
+
+        height:54px;
+
+    }
+
+}
+
+/*==============================================================================
+    ACCESSIBILITY
+==============================================================================*/
+
+.btn:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.18),
+        var(--shadow-focus);
+
+}
+
+.btn[aria-disabled="true"]{
+
+    pointer-events:none;
+
+    opacity:.55;
+
+}
+
+.btn[aria-busy="true"]{
+
+    cursor:progress;
+
+}
+
+.btn[aria-expanded="true"]{
+
+    box-shadow:var(--shadow-focus);
+
+}
+
+/*==============================================================================
+    HIGH CONTRAST MODE
+==============================================================================*/
+
+@media (prefers-contrast: more){
+
+    .btn{
+
+        border-width:2px;
+
+    }
+
+    .btn-outline{
+
+        border-width:3px;
+
+    }
+
+}
+
+/*==============================================================================
+    REDUCED MOTION
+==============================================================================*/
+
+@media (prefers-reduced-motion: reduce){
+
+    .btn,
+    .btn::before,
+    .btn::after,
+    .btn-fab,
+    .scroll-top{
+
+        transition:none !important;
+
+        animation:none !important;
+
+        transform:none !important;
+
+    }
+
+}
+
+/*==============================================================================
+    PRINT STYLES
+==============================================================================*/
+
+@media print{
+
+    .btn,
+    .btn-fab,
+    .scroll-top{
+
+        display:none !important;
+
+    }
+
+}
+
+/*==============================================================================
+    DARK MODE REFINEMENTS
+==============================================================================*/
+
+[data-theme="dark"] .btn-outline{
+
+    color:var(--white);
+
+    border-color:rgba(255,255,255,.25);
+
+}
+
+[data-theme="dark"] .btn-ghost{
+
+    color:var(--white);
+
+}
+
+[data-theme="dark"] .btn-light{
+
+    background:var(--gray-800);
+
+    color:var(--white);
+
+    border-color:var(--gray-700);
+
+}
+
+/*==============================================================================
+    PERFORMANCE
+==============================================================================*/
+
+.btn,
+.btn-fab,
+.scroll-top{
+
+    contain:layout style;
+
+    transform:translateZ(0);
+
+}
+
+.btn img,
+.btn svg{
+
+    flex-shrink:0;
+
+}
+
+/*==============================================================================
+    ENTERPRISE POLISH
+==============================================================================*/
+
+.btn{
+
+    text-transform:none;
+
+    letter-spacing:.01em;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+.btn:hover{
+
+    text-decoration:none;
+
+}
+
+.btn:disabled{
+
+    filter:grayscale(.15);
+
+}
+
+.btn.loading-success{
+
+    background:var(--success);
+
+}
+
+.btn.loading-error{
+
+    background:var(--danger);
+
+}
+
+/*==============================================================================
+    BUTTON ANIMATION HELPERS
+==============================================================================*/
+
+.btn-fade-in{
+
+    animation:btnFadeIn .35s ease-out;
+
+}
+
+.btn-slide-up{
+
+    animation:btnSlideUp .4s ease-out;
+
+}
+
+@keyframes btnFadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes btnSlideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==============================================================================
+    END OF buttons.css
+
+    Enterprise Design System
+    Version : 3.1
+
+==============================================================================*/

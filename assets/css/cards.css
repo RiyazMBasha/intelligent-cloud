@@ -1,0 +1,2801 @@
+.card { ... }
+
+.service-card {
+    @extend .card;
+}
+
+.team-card {
+    @extend .card;
+}
+
+File: assets/css/cards.css
+
+/*==============================================================================
+    Intelligent Technology Company (ITC)
+    Enterprise Design System
+
+    File        : cards.css
+    Version     : 3.1
+    Description : Enterprise Card Component System
+
+    Dependencies:
+    - variables.css
+    - base.css
+    - spacing.css
+    - buttons.css
+==============================================================================*/
+
+/*==============================================================================
+    CARD RESET
+==============================================================================*/
+
+.card{
+
+    --card-bg: var(--white);
+    --card-color: var(--gray-800);
+    --card-border: var(--gray-200);
+    --card-radius: var(--radius-xl);
+    --card-shadow: var(--shadow-md);
+    --card-hover-shadow: var(--shadow-xl);
+    --card-padding: var(--space-6);
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    background: var(--card-bg);
+
+    color: var(--card-color);
+
+    border: 1px solid var(--card-border);
+
+    border-radius: var(--card-radius);
+
+    box-shadow: var(--card-shadow);
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal),
+        border-color var(--transition-normal),
+        background-color var(--transition-normal);
+
+}
+
+/*==============================================================================
+    BASE CARD
+==============================================================================*/
+
+.card-block{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.card-elevated{
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+.card-flat{
+
+    box-shadow:none;
+
+}
+
+.card-bordered{
+
+    border:1px solid var(--gray-300);
+
+}
+
+.card-borderless{
+
+    border:none;
+
+}
+
+.card-compact{
+
+    --card-padding:var(--space-4);
+
+}
+
+.card-spacious{
+
+    --card-padding:var(--space-8);
+
+}
+
+/*==============================================================================
+    CARD HEADER
+==============================================================================*/
+
+.card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-4);
+
+    padding:var(--card-padding);
+
+    border-bottom:1px solid var(--gray-200);
+
+    background:var(--gray-50);
+
+}
+
+.card-header-start{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-3);
+
+}
+
+.card-header-end{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-2);
+
+}
+
+/*==============================================================================
+    CARD BODY
+==============================================================================*/
+
+.card-body{
+
+    flex:1;
+
+    padding:var(--card-padding);
+
+}
+
+.card-body>*:first-child{
+
+    margin-top:0;
+
+}
+
+.card-body>*:last-child{
+
+    margin-bottom:0;
+
+}
+
+/*==============================================================================
+    CARD FOOTER
+==============================================================================*/
+
+.card-footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-4);
+
+    padding:var(--card-padding);
+
+    border-top:1px solid var(--gray-200);
+
+    background:var(--gray-50);
+
+}
+
+/*==============================================================================
+    CARD IMAGE
+==============================================================================*/
+
+.card-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--gray-100);
+
+}
+
+.card-image img{
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:cover;
+
+    transition:
+        transform .45s ease,
+        filter .35s ease;
+
+}
+
+.card-image-cover img{
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.card-image-square{
+
+    aspect-ratio:1/1;
+
+}
+
+.card-image-landscape{
+
+    aspect-ratio:16/9;
+
+}
+
+.card-image-portrait{
+
+    aspect-ratio:4/5;
+
+}
+
+/*==============================================================================
+    CARD TITLE
+==============================================================================*/
+
+.card-title{
+
+    margin:0 0 var(--space-2);
+
+    font-size:var(--fs-xl);
+
+    font-weight:var(--fw-bold);
+
+    color:var(--gray-900);
+
+    line-height:1.3;
+
+}
+
+/*==============================================================================
+    CARD SUBTITLE
+==============================================================================*/
+
+.card-subtitle{
+
+    margin-bottom:var(--space-3);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-medium);
+
+    color:var(--gray-600);
+
+    text-transform:uppercase;
+
+    letter-spacing:.06em;
+
+}
+
+/*==============================================================================
+    CARD TEXT
+==============================================================================*/
+
+.card-text{
+
+    color:var(--gray-700);
+
+    font-size:var(--fs-base);
+
+    line-height:1.75;
+
+}
+
+.card-text p:last-child{
+
+    margin-bottom:0;
+
+}
+
+/*==============================================================================
+    CARD ACTIONS
+==============================================================================*/
+
+.card-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:var(--space-3);
+
+    margin-top:var(--space-5);
+
+}
+
+.card-actions-between{
+
+    justify-content:space-between;
+
+}
+
+.card-actions-center{
+
+    justify-content:center;
+
+}
+
+.card-actions-end{
+
+    justify-content:flex-end;
+
+}
+
+/*==============================================================================
+    CARD DIVIDERS
+==============================================================================*/
+
+.card-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--gray-200);
+
+    margin:var(--space-5) 0;
+
+    border:none;
+
+}
+
+.card-divider-vertical{
+
+    width:1px;
+
+    align-self:stretch;
+
+    background:var(--gray-200);
+
+}
+
+/*==============================================================================
+    BASIC HOVER EFFECTS
+==============================================================================*/
+
+.card-hover{
+
+    cursor:pointer;
+
+}
+
+.card-hover:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--card-hover-shadow);
+
+    border-color:rgba(37,99,235,.20);
+
+}
+
+.card-hover:hover .card-image img{
+
+    transform:scale(1.05);
+
+}
+
+.card-hover:hover .card-title{
+
+    color:var(--primary);
+
+}
+
+.card-hover:focus-within{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.15),
+        var(--shadow-xl);
+
+}
+
+/*==============================================================================
+    CARD LINK OVERLAY
+==============================================================================*/
+
+.card-link{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    text-indent:-9999px;
+
+    overflow:hidden;
+
+}
+
+/*==============================================================================
+    PART 1 COMPLETE
+
+    Next:
+    ✓ Service Cards
+    ✓ Feature Cards
+    ✓ Solution Cards
+    ✓ Icon Cards
+    ✓ Statistics Cards
+    ✓ Benefit Cards
+    ✓ Interactive Cards
+    ✓ Hover Elevation Variants
+==============================================================================*/
+
+/*==============================================================================
+    SERVICE CARDS
+==============================================================================*/
+
+.service-card{
+
+    text-align:center;
+
+    height:100%;
+
+}
+
+.service-card .service-icon{
+
+    width:72px;
+
+    height:72px;
+
+    margin:0 auto var(--space-5);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    transition:all var(--transition-normal);
+
+}
+
+.service-card:hover .service-icon{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    transform:rotate(8deg) scale(1.08);
+
+}
+
+.service-card .card-title{
+
+    margin-bottom:var(--space-3);
+
+}
+
+.service-card .card-text{
+
+    margin-bottom:var(--space-5);
+
+}
+
+/*==============================================================================
+    FEATURE CARDS
+==============================================================================*/
+
+.feature-card{
+
+    display:flex;
+
+    gap:var(--space-5);
+
+    align-items:flex-start;
+
+}
+
+.feature-icon{
+
+    flex-shrink:0;
+
+    width:64px;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:var(--radius-lg);
+
+    background:var(--gradient-primary);
+
+    color:var(--white);
+
+    font-size:1.75rem;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.feature-content{
+
+    flex:1;
+
+}
+
+/*==============================================================================
+    SOLUTION CARDS
+==============================================================================*/
+
+.solution-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.solution-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.60),
+        rgba(0,0,0,0)
+    );
+
+    opacity:0;
+
+    transition:opacity var(--transition-normal);
+
+}
+
+.solution-card:hover::before{
+
+    opacity:1;
+
+}
+
+.solution-card .card-image img{
+
+    transition:transform .5s ease;
+
+}
+
+.solution-card:hover .card-image img{
+
+    transform:scale(1.08);
+
+}
+
+/*==============================================================================
+    ICON CARDS
+==============================================================================*/
+
+.icon-card{
+
+    text-align:center;
+
+    padding:var(--space-6);
+
+}
+
+.icon-card .icon{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:var(--space-4);
+
+    transition:transform var(--transition-normal);
+
+}
+
+.icon-card:hover .icon{
+
+    transform:translateY(-6px);
+
+}
+
+/*==============================================================================
+    STATISTICS CARDS
+==============================================================================*/
+
+.stat-card{
+
+    text-align:center;
+
+    padding:var(--space-6);
+
+}
+
+.stat-number{
+
+    display:block;
+
+    font-size:clamp(2rem,4vw,3.5rem);
+
+    font-weight:var(--fw-bold);
+
+    color:var(--primary);
+
+    line-height:1;
+
+    margin-bottom:var(--space-2);
+
+}
+
+.stat-label{
+
+    color:var(--gray-600);
+
+    font-size:var(--fs-sm);
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+
+}
+
+/*==============================================================================
+    BENEFIT CARDS
+==============================================================================*/
+
+.benefit-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:var(--space-4);
+
+}
+
+.benefit-icon{
+
+    width:56px;
+
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(22,163,74,.10);
+
+    color:var(--success);
+
+    flex-shrink:0;
+
+}
+
+.benefit-content{
+
+    flex:1;
+
+}
+
+/*==============================================================================
+    INTERACTIVE CARDS
+==============================================================================*/
+
+.card-interactive{
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+.card-interactive:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+.card-interactive:active{
+
+    transform:translateY(-2px);
+
+}
+
+.card-interactive:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.18),
+        var(--shadow-xl);
+
+}
+
+/*==============================================================================
+    HOVER ELEVATION VARIANTS
+==============================================================================*/
+
+.card-hover-sm:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.card-hover-md:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.card-hover-lg:hover{
+
+    transform:translateY(-14px);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+/*==============================================================================
+    CARD ACCENT STYLES
+==============================================================================*/
+
+.card-accent-top{
+
+    border-top:4px solid var(--primary);
+
+}
+
+.card-accent-left{
+
+    border-inline-start:4px solid var(--primary);
+
+}
+
+.card-accent-success{
+
+    border-top:4px solid var(--success);
+
+}
+
+.card-accent-warning{
+
+    border-top:4px solid var(--warning);
+
+}
+
+.card-accent-danger{
+
+    border-top:4px solid var(--danger);
+
+}
+
+/*==============================================================================
+    CARD ICON BACKGROUNDS
+==============================================================================*/
+
+.icon-circle{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.icon-square{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:var(--radius-lg);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.icon-soft-primary{
+
+    background:rgba(37,99,235,.10);
+
+    color:var(--primary);
+
+}
+
+.icon-soft-success{
+
+    background:rgba(22,163,74,.10);
+
+    color:var(--success);
+
+}
+
+.icon-soft-warning{
+
+    background:rgba(245,158,11,.12);
+
+    color:var(--warning);
+
+}
+
+.icon-soft-danger{
+
+    background:rgba(220,38,38,.10);
+
+    color:var(--danger);
+
+}
+
+/*==============================================================================
+    PART 2 COMPLETE
+
+    Next:
+    ✓ Team Member Cards
+    ✓ Leadership Cards
+    ✓ Testimonial Cards
+    ✓ Client Cards
+    ✓ Partner Cards
+    ✓ Logo Cards
+==============================================================================*/
+
+/*==============================================================================
+    TEAM MEMBER CARDS
+==============================================================================*/
+
+.team-card{
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+.team-card .card-image{
+
+    position:relative;
+
+}
+
+.team-card .card-image img{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    transition:
+        transform .45s ease,
+        filter .35s ease;
+
+}
+
+.team-card:hover .card-image img{
+
+    transform:scale(1.06);
+
+}
+
+.team-avatar{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid var(--white);
+
+    box-shadow:var(--shadow-lg);
+
+    margin-inline:auto;
+
+}
+
+.team-name{
+
+    margin:0 0 var(--space-2);
+
+    font-size:var(--fs-xl);
+
+    font-weight:var(--fw-bold);
+
+    color:var(--gray-900);
+
+}
+
+.team-role{
+
+    color:var(--primary);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semi-bold);
+
+    text-transform:uppercase;
+
+    letter-spacing:.06em;
+
+    margin-bottom:var(--space-4);
+
+}
+
+.team-bio{
+
+    color:var(--gray-600);
+
+    line-height:1.8;
+
+}
+
+.team-social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:var(--space-3);
+
+    margin-top:var(--space-5);
+
+}
+
+.team-social a{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--gray-100);
+
+    color:var(--gray-700);
+
+    transition:all var(--transition-fast);
+
+}
+
+.team-social a:hover{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    transform:translateY(-3px);
+
+}
+
+/*==============================================================================
+    LEADERSHIP CARDS
+==============================================================================*/
+
+.leadership-card{
+
+    border-top:5px solid var(--primary);
+
+}
+
+.leadership-card .team-name{
+
+    font-size:var(--fs-2xl);
+
+}
+
+.leadership-card .team-role{
+
+    color:var(--secondary);
+
+}
+
+.leadership-card::after{
+
+    content:"Leadership";
+
+    position:absolute;
+
+    top:1rem;
+
+    right:1rem;
+
+    font-size:var(--fs-xs);
+
+    padding:.35rem .7rem;
+
+    border-radius:999px;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--primary);
+
+    font-weight:var(--fw-bold);
+
+}
+
+/*==============================================================================
+    TESTIMONIAL CARDS
+==============================================================================*/
+
+.testimonial-card{
+
+    position:relative;
+
+}
+
+.testimonial-card::before{
+
+    content:"“";
+
+    position:absolute;
+
+    top:1rem;
+
+    left:1.5rem;
+
+    font-size:5rem;
+
+    color:rgba(37,99,235,.08);
+
+    font-family:serif;
+
+    line-height:1;
+
+}
+
+.testimonial-text{
+
+    position:relative;
+
+    color:var(--gray-700);
+
+    font-style:italic;
+
+    line-height:1.9;
+
+    margin-bottom:var(--space-6);
+
+}
+
+.testimonial-author{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-4);
+
+}
+
+.testimonial-author img{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.testimonial-name{
+
+    font-weight:var(--fw-bold);
+
+    color:var(--gray-900);
+
+}
+
+.testimonial-position{
+
+    color:var(--gray-500);
+
+    font-size:var(--fs-sm);
+
+}
+
+.testimonial-rating{
+
+    display:flex;
+
+    gap:.25rem;
+
+    margin-bottom:var(--space-3);
+
+    color:#FBBF24;
+
+}
+
+/*==============================================================================
+    CLIENT CARDS
+==============================================================================*/
+
+.client-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:160px;
+
+    padding:var(--space-6);
+
+}
+
+.client-card img{
+
+    max-width:180px;
+
+    max-height:70px;
+
+    opacity:.75;
+
+    transition:all var(--transition-normal);
+
+    filter:grayscale(100%);
+
+}
+
+.client-card:hover img{
+
+    opacity:1;
+
+    filter:none;
+
+    transform:scale(1.05);
+
+}
+
+/*==============================================================================
+    PARTNER CARDS
+==============================================================================*/
+
+.partner-card{
+
+    text-align:center;
+
+}
+
+.partner-logo{
+
+    width:90px;
+
+    height:90px;
+
+    margin-inline:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--gray-50);
+
+    margin-bottom:var(--space-5);
+
+}
+
+.partner-logo img{
+
+    max-width:60px;
+
+    max-height:60px;
+
+}
+
+.partner-name{
+
+    font-weight:var(--fw-bold);
+
+    margin-bottom:var(--space-2);
+
+}
+
+.partner-category{
+
+    color:var(--gray-600);
+
+    font-size:var(--fs-sm);
+
+}
+
+/*==============================================================================
+    LOGO CARDS
+==============================================================================*/
+
+.logo-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:140px;
+
+    background:var(--white);
+
+    border:1px solid var(--gray-200);
+
+    border-radius:var(--radius-lg);
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+
+}
+
+.logo-card img{
+
+    max-width:160px;
+
+    max-height:70px;
+
+    transition:transform var(--transition-normal);
+
+}
+
+.logo-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.logo-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==============================================================================
+    TRUST BADGES
+==============================================================================*/
+
+.trust-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    padding:.5rem 1rem;
+
+    border-radius:999px;
+
+    background:rgba(22,163,74,.08);
+
+    color:var(--success);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semi-bold);
+
+}
+
+/*==============================================================================
+    PART 3 COMPLETE
+
+    Next:
+    ✓ Pricing Cards
+    ✓ Blog Cards
+    ✓ News Cards
+    ✓ Portfolio Cards
+    ✓ Project Cards
+    ✓ Timeline Cards
+==============================================================================*/
+/*==============================================================================
+    PRICING CARDS
+==============================================================================*/
+
+.pricing-card{
+
+    position:relative;
+
+    text-align:center;
+
+    height:100%;
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+
+}
+
+.pricing-card.featured{
+
+    border:2px solid var(--primary);
+
+    transform:scale(1.03);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+.pricing-badge{
+
+    position:absolute;
+
+    top:1.25rem;
+
+    right:1.25rem;
+
+    padding:.45rem .85rem;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+    text-transform:uppercase;
+
+    letter-spacing:.05em;
+
+}
+
+.pricing-price{
+
+    margin:var(--space-5) 0;
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+    font-weight:var(--fw-bold);
+
+    color:var(--primary);
+
+    line-height:1;
+
+}
+
+.pricing-period{
+
+    color:var(--gray-500);
+
+    font-size:var(--fs-sm);
+
+}
+
+.pricing-features{
+
+    list-style:none;
+
+    margin:var(--space-6) 0;
+
+    padding:0;
+
+}
+
+.pricing-features li{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.75rem;
+
+    padding:.75rem 0;
+
+    border-bottom:1px solid var(--gray-100);
+
+}
+
+.pricing-features li:last-child{
+
+    border-bottom:none;
+
+}
+
+/*==============================================================================
+    BLOG CARDS
+==============================================================================*/
+
+.blog-card{
+
+    overflow:hidden;
+
+}
+
+.blog-card .card-image{
+
+    overflow:hidden;
+
+}
+
+.blog-card .card-image img{
+
+    transition:transform .45s ease;
+
+}
+
+.blog-card:hover .card-image img{
+
+    transform:scale(1.08);
+
+}
+
+.blog-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:var(--space-3);
+
+    margin-bottom:var(--space-3);
+
+    font-size:var(--fs-sm);
+
+    color:var(--gray-500);
+
+}
+
+.blog-category{
+
+    color:var(--primary);
+
+    font-weight:var(--fw-semi-bold);
+
+}
+
+.blog-read-time{
+
+    margin-left:auto;
+
+}
+
+/*==============================================================================
+    NEWS CARDS
+==============================================================================*/
+
+.news-card{
+
+    border-left:4px solid var(--secondary);
+
+}
+
+.news-date{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    color:var(--secondary);
+
+    font-weight:var(--fw-semi-bold);
+
+    margin-bottom:var(--space-3);
+
+}
+
+.news-label{
+
+    display:inline-block;
+
+    padding:.3rem .75rem;
+
+    border-radius:999px;
+
+    background:rgba(14,165,233,.10);
+
+    color:var(--secondary);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+    text-transform:uppercase;
+
+}
+
+/*==============================================================================
+    PORTFOLIO CARDS
+==============================================================================*/
+
+.portfolio-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.portfolio-card .card-image{
+
+    position:relative;
+
+}
+
+.portfolio-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:var(--space-6);
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.78),
+        rgba(0,0,0,.15)
+    );
+
+    color:var(--white);
+
+    opacity:0;
+
+    transition:opacity var(--transition-normal);
+
+}
+
+.portfolio-card:hover .portfolio-overlay{
+
+    opacity:1;
+
+}
+
+.portfolio-card:hover .card-image img{
+
+    transform:scale(1.08);
+
+}
+
+/*==============================================================================
+    PROJECT CARDS
+==============================================================================*/
+
+.project-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.project-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semi-bold);
+
+}
+
+.project-progress{
+
+    width:100%;
+
+    height:8px;
+
+    margin-top:var(--space-4);
+
+    border-radius:999px;
+
+    background:var(--gray-200);
+
+    overflow:hidden;
+
+}
+
+.project-progress-bar{
+
+    height:100%;
+
+    width:0;
+
+    background:var(--gradient-primary);
+
+    transition:width .6s ease;
+
+}
+
+/*==============================================================================
+    TIMELINE CARDS
+==============================================================================*/
+
+.timeline-card{
+
+    position:relative;
+
+    padding-left:3rem;
+
+}
+
+.timeline-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:1rem;
+
+    top:0;
+
+    bottom:0;
+
+    width:2px;
+
+    background:var(--gray-200);
+
+}
+
+.timeline-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:.55rem;
+
+    top:1.25rem;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    border:4px solid var(--white);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.timeline-date{
+
+    color:var(--primary);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-bold);
+
+    margin-bottom:var(--space-2);
+
+}
+
+.timeline-title{
+
+    margin-bottom:var(--space-2);
+
+    font-weight:var(--fw-bold);
+
+    color:var(--gray-900);
+
+}
+
+.timeline-description{
+
+    color:var(--gray-600);
+
+    line-height:1.8;
+
+}
+
+/*==============================================================================
+    CONTENT CARD HELPERS
+==============================================================================*/
+
+.card-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.35rem;
+
+    padding:.35rem .75rem;
+
+    border-radius:999px;
+
+    background:var(--gray-100);
+
+    color:var(--gray-700);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-medium);
+
+}
+
+.card-date{
+
+    color:var(--gray-500);
+
+    font-size:var(--fs-sm);
+
+}
+
+.card-author{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+}
+
+.card-author img{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+/*==============================================================================
+    PART 4 COMPLETE
+
+    Next:
+    ✓ Glass Cards
+    ✓ Gradient Cards
+    ✓ Overlay Cards
+    ✓ Ribbon Badges
+    ✓ Status Badges
+    ✓ Notification Cards
+    ✓ KPI Cards
+==============================================================================*/
+
+/*==============================================================================
+    GLASS CARDS
+==============================================================================*/
+
+.glass-card{
+
+    --card-bg: rgba(255,255,255,.12);
+
+    background:var(--card-bg);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+.glass-card .card-title,
+.glass-card .card-text{
+
+    color:var(--white);
+
+}
+
+/*==============================================================================
+    GRADIENT CARDS
+==============================================================================*/
+
+.gradient-card{
+
+    background:var(--gradient-primary);
+
+    color:var(--white);
+
+    border:none;
+
+}
+
+.gradient-card .card-title,
+.gradient-card .card-subtitle,
+.gradient-card .card-text{
+
+    color:inherit;
+
+}
+
+.gradient-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(255,255,255,.15),
+        transparent 55%);
+
+    pointer-events:none;
+
+}
+
+/*==============================================================================
+    OVERLAY CARDS
+==============================================================================*/
+
+.overlay-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.overlay-card .card-image{
+
+    position:relative;
+
+}
+
+.overlay-card .card-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:var(--space-6);
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.05)
+    );
+
+    color:var(--white);
+
+    opacity:0;
+
+    transition:opacity var(--transition-normal);
+
+}
+
+.overlay-card:hover .card-overlay{
+
+    opacity:1;
+
+}
+
+/*==============================================================================
+    RIBBON BADGES
+==============================================================================*/
+
+.card-ribbon{
+
+    position:absolute;
+
+    top:1rem;
+
+    inset-inline-end:-2.5rem;
+
+    width:10rem;
+
+    padding:.55rem 0;
+
+    text-align:center;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+    text-transform:uppercase;
+
+    transform:rotate(45deg);
+
+    box-shadow:var(--shadow-md);
+
+    z-index:2;
+
+}
+
+.card-ribbon-success{
+
+    background:var(--success);
+
+}
+
+.card-ribbon-warning{
+
+    background:var(--warning);
+
+    color:var(--gray-900);
+
+}
+
+.card-ribbon-danger{
+
+    background:var(--danger);
+
+}
+
+/*==============================================================================
+    STATUS BADGES
+==============================================================================*/
+
+.status-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    padding:.45rem .85rem;
+
+    border-radius:999px;
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+    text-transform:uppercase;
+
+    letter-spacing:.04em;
+
+}
+
+.status-active{
+
+    background:rgba(22,163,74,.10);
+
+    color:var(--success);
+
+}
+
+.status-pending{
+
+    background:rgba(245,158,11,.10);
+
+    color:#92400E;
+
+}
+
+.status-processing{
+
+    background:rgba(14,165,233,.10);
+
+    color:var(--info);
+
+}
+
+.status-inactive{
+
+    background:rgba(107,114,128,.12);
+
+    color:var(--gray-600);
+
+}
+
+.status-error{
+
+    background:rgba(220,38,38,.10);
+
+    color:var(--danger);
+
+}
+
+/*==============================================================================
+    NOTIFICATION CARDS
+==============================================================================*/
+
+.notification-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:var(--space-4);
+
+    border-inline-start:5px solid var(--primary);
+
+}
+
+.notification-icon{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--primary);
+
+    flex-shrink:0;
+
+}
+
+.notification-success{
+
+    border-inline-start-color:var(--success);
+
+}
+
+.notification-warning{
+
+    border-inline-start-color:var(--warning);
+
+}
+
+.notification-danger{
+
+    border-inline-start-color:var(--danger);
+
+}
+
+/*==============================================================================
+    KPI CARDS
+==============================================================================*/
+
+.kpi-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.kpi-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset-inline-end:-2rem;
+
+    inset-block-end:-2rem;
+
+    width:8rem;
+
+    height:8rem;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.05);
+
+}
+
+.kpi-value{
+
+    font-size:clamp(2rem,5vw,3.5rem);
+
+    font-weight:var(--fw-bold);
+
+    color:var(--primary);
+
+    line-height:1;
+
+}
+
+.kpi-label{
+
+    margin-top:var(--space-2);
+
+    color:var(--gray-600);
+
+    font-size:var(--fs-sm);
+
+    text-transform:uppercase;
+
+    letter-spacing:.05em;
+
+}
+
+.kpi-change{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.35rem;
+
+    margin-top:var(--space-4);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semi-bold);
+
+}
+
+.kpi-positive{
+
+    color:var(--success);
+
+}
+
+.kpi-negative{
+
+    color:var(--danger);
+
+}
+
+.kpi-neutral{
+
+    color:var(--gray-600);
+
+}
+
+/*==============================================================================
+    FEATURED CARD
+==============================================================================*/
+
+.card-featured{
+
+    border:2px solid var(--primary);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+.card-featured::before{
+
+    content:"Featured";
+
+    position:absolute;
+
+    top:1rem;
+
+    inset-inline-start:1rem;
+
+    padding:.35rem .75rem;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+    z-index:2;
+
+}
+
+/*==============================================================================
+    DASHBOARD METRIC CARD
+==============================================================================*/
+
+.metric-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-5);
+
+}
+
+.metric-icon{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:var(--radius-lg);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--primary);
+
+    font-size:1.75rem;
+
+}
+
+/*==============================================================================
+    PART 5 COMPLETE
+
+    Next:
+    ✓ Responsive Card Layouts
+    ✓ Dark Mode Support
+    ✓ Accessibility Improvements
+    ✓ Reduced Motion
+    ✓ Print Styles
+    ✓ Animation Helpers
+    ✓ Production Polish
+    ✓ End of cards.css
+==============================================================================*/
+/*==============================================================================
+    GLASS CARDS
+==============================================================================*/
+
+.glass-card{
+
+    --card-bg: rgba(255,255,255,.12);
+
+    background:var(--card-bg);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+.glass-card .card-title,
+.glass-card .card-text{
+
+    color:var(--white);
+
+}
+
+/*==============================================================================
+    GRADIENT CARDS
+==============================================================================*/
+
+.gradient-card{
+
+    background:var(--gradient-primary);
+
+    color:var(--white);
+
+    border:none;
+
+}
+
+.gradient-card .card-title,
+.gradient-card .card-subtitle,
+.gradient-card .card-text{
+
+    color:inherit;
+
+}
+
+.gradient-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(255,255,255,.15),
+        transparent 55%);
+
+    pointer-events:none;
+
+}
+
+/*==============================================================================
+    OVERLAY CARDS
+==============================================================================*/
+
+.overlay-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.overlay-card .card-image{
+
+    position:relative;
+
+}
+
+.overlay-card .card-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:var(--space-6);
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.05)
+    );
+
+    color:var(--white);
+
+    opacity:0;
+
+    transition:opacity var(--transition-normal);
+
+}
+
+.overlay-card:hover .card-overlay{
+
+    opacity:1;
+
+}
+
+/*==============================================================================
+    RIBBON BADGES
+==============================================================================*/
+
+.card-ribbon{
+
+    position:absolute;
+
+    top:1rem;
+
+    inset-inline-end:-2.5rem;
+
+    width:10rem;
+
+    padding:.55rem 0;
+
+    text-align:center;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+    text-transform:uppercase;
+
+    transform:rotate(45deg);
+
+    box-shadow:var(--shadow-md);
+
+    z-index:2;
+
+}
+
+.card-ribbon-success{
+
+    background:var(--success);
+
+}
+
+.card-ribbon-warning{
+
+    background:var(--warning);
+
+    color:var(--gray-900);
+
+}
+
+.card-ribbon-danger{
+
+    background:var(--danger);
+
+}
+
+/*==============================================================================
+    STATUS BADGES
+==============================================================================*/
+
+.status-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    padding:.45rem .85rem;
+
+    border-radius:999px;
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+    text-transform:uppercase;
+
+    letter-spacing:.04em;
+
+}
+
+.status-active{
+
+    background:rgba(22,163,74,.10);
+
+    color:var(--success);
+
+}
+
+.status-pending{
+
+    background:rgba(245,158,11,.10);
+
+    color:#92400E;
+
+}
+
+.status-processing{
+
+    background:rgba(14,165,233,.10);
+
+    color:var(--info);
+
+}
+
+.status-inactive{
+
+    background:rgba(107,114,128,.12);
+
+    color:var(--gray-600);
+
+}
+
+.status-error{
+
+    background:rgba(220,38,38,.10);
+
+    color:var(--danger);
+
+}
+
+/*==============================================================================
+    NOTIFICATION CARDS
+==============================================================================*/
+
+.notification-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:var(--space-4);
+
+    border-inline-start:5px solid var(--primary);
+
+}
+
+.notification-icon{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--primary);
+
+    flex-shrink:0;
+
+}
+
+.notification-success{
+
+    border-inline-start-color:var(--success);
+
+}
+
+.notification-warning{
+
+    border-inline-start-color:var(--warning);
+
+}
+
+.notification-danger{
+
+    border-inline-start-color:var(--danger);
+
+}
+
+/*==============================================================================
+    KPI CARDS
+==============================================================================*/
+
+.kpi-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.kpi-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset-inline-end:-2rem;
+
+    inset-block-end:-2rem;
+
+    width:8rem;
+
+    height:8rem;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.05);
+
+}
+
+.kpi-value{
+
+    font-size:clamp(2rem,5vw,3.5rem);
+
+    font-weight:var(--fw-bold);
+
+    color:var(--primary);
+
+    line-height:1;
+
+}
+
+.kpi-label{
+
+    margin-top:var(--space-2);
+
+    color:var(--gray-600);
+
+    font-size:var(--fs-sm);
+
+    text-transform:uppercase;
+
+    letter-spacing:.05em;
+
+}
+
+.kpi-change{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.35rem;
+
+    margin-top:var(--space-4);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semi-bold);
+
+}
+
+.kpi-positive{
+
+    color:var(--success);
+
+}
+
+.kpi-negative{
+
+    color:var(--danger);
+
+}
+
+.kpi-neutral{
+
+    color:var(--gray-600);
+
+}
+
+/*==============================================================================
+    FEATURED CARD
+==============================================================================*/
+
+.card-featured{
+
+    border:2px solid var(--primary);
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+.card-featured::before{
+
+    content:"Featured";
+
+    position:absolute;
+
+    top:1rem;
+
+    inset-inline-start:1rem;
+
+    padding:.35rem .75rem;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-bold);
+
+    z-index:2;
+
+}
+
+/*==============================================================================
+    DASHBOARD METRIC CARD
+==============================================================================*/
+
+.metric-card{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-5);
+
+}
+
+.metric-icon{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:var(--radius-lg);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--primary);
+
+    font-size:1.75rem;
+
+}
+
+/*==============================================================================
+    PART 5 COMPLETE
+
+    Next:
+    ✓ Responsive Card Layouts
+    ✓ Dark Mode Support
+    ✓ Accessibility Improvements
+    ✓ Reduced Motion
+    ✓ Print Styles
+    ✓ Animation Helpers
+    ✓ Production Polish
+    ✓ End of cards.css
+==============================================================================*/
